@@ -2,16 +2,26 @@ import classnames from "classnames";
 import cls from "./footer.module.css";
 import { items } from "../menu/items";
 
-const Footer = () => {
+interface FooterProps {
+  isWhite?: boolean;
+  isDark?: boolean;
+}
+
+const Footer = (props: FooterProps) => {
+  const { isWhite, isDark } = props;
   return (
     <>
-      <div>
+      <div style={{ backgroundColor: isDark ? "#222222" : "" }}>
         <div className={cls.linksBeforeFooterContainer}>
           <ul className={cls.linksBeforeFooterList}>
             {items.map(({ text, href }) => {
               return (
                 <li key={text} className={cls.linksBeforeFooterItem}>
-                  <a className={cls.linksBeforeFooterLink} href={href}>
+                  <a
+                    style={{ color: isWhite ? "white" : "" }}
+                    className={cls.linksBeforeFooterLink}
+                    href={href}
+                  >
                     {text}
                   </a>
                 </li>

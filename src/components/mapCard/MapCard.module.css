@@ -1,0 +1,124 @@
+.mapInfoCard {
+  background-color: #222222;
+  padding: 10px 5px;
+  min-height: 150px;
+  max-width: 334px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.cityText {
+  font-size: 22px;
+}
+
+.addressText {
+  font-size: 16px;
+}
+
+.email,
+.phone {
+  color: #828282;
+  font-weight: 400;
+}
+
+.cityText,
+.addressText,
+.emailAddress,
+.number {
+  color: #ffffff;
+}
+
+@media (max-width: 1000px) {
+  .cityText {
+    font-size: 16px;
+  }
+
+  .emailAddress,
+  .number,
+  .email,
+  .phone,
+  .addressText {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 900px) {
+  .cityText {
+    font-size: 12px;
+  }
+
+  .emailAddress,
+  .number,
+  .email,
+  .phone,
+  .addressText {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 800px) {
+  .cityText {
+    font-size: 10px;
+  }
+
+  .emailAddress,
+  .number,
+  .email,
+  .phone,
+  .addressText {
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 600px) {
+  .cityText {
+    font-size: 8px;
+  }
+  .emailAddress,
+  .number,
+  .email,
+  .phone,
+  .addressText {
+    font-size: 6px;
+  }
+}
+
+@media (max-width: 500px) {
+  .cityText {
+    font-size: 7px;
+  }
+  .emailAddress,
+  .number,
+  .email,
+  .phone,
+  .addressText {
+    font-size: 5px;
+  }
+}
+
+@media (max-width: 400px) {
+  .cityText {
+    font-size: 6px;
+  }
+  .emailAddress,
+  .number,
+  .email,
+  .phone,
+  .addressText {
+    font-size: 4px;
+  }
+}
+
+@media (max-width: 300px) {
+  .cityText {
+    font-size: 5px;
+  }
+  .emailAddress,
+  .number,
+  .email,
+  .phone,
+  .addressText {
+    font-size: 3px;
+  }
+}

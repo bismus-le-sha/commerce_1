@@ -39,6 +39,15 @@ const Layout = ({ children }: { children: ReactNode }) => {
           href='https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap'
           rel='stylesheet'
         />
+
+        <link
+          href='https://api.tiles.mapbox.com/mapbox-gl-js/v<YOUR_MAPBOX_VERSION>/mapbox-gl.css'
+          rel='stylesheet'
+        />
+        <script
+          src='https://api-maps.yandex.ru/2.1/?apikey=70cb9f64-4936-4b5c-aa59-c3151d1f9a30&lang=en_US'
+          type='text/javascript'
+        ></script>
       </head>
       <body>{children}</body>
     </html>

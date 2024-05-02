@@ -1,15 +1,18 @@
 "use client";
 
-import { ReactNode, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "../../../components/swiper/swiper.css";
 
 import cls from "../../../styles/menuContactWithMe.module.css";
 import classnames from "classnames";
 import Link from "next/link";
-import Image from "next/image";
-import roomImg from "@/assets/room.png";
 
+import roomImg from "@/assets/room.png";
+import Image from "next/image";
+import map from "@/assets/map.png";
 import { items } from "../../../components/menu/items";
+import Footer from "@/components/footer/footer";
+import MapCard from "@/components/mapCard/MapCard";
 
 const ContactsWithUsPage = () => {
   const [isMedia, setIsMedia] = useState<boolean>(false);
@@ -106,6 +109,38 @@ const ContactsWithUsPage = () => {
             />
           </div>
         </main>
+        <div className={cls.maps}>
+          <div className={cls.mapImgContainer}>
+            <Image src={map} alt='map' />
+            <MapCard
+              cityText='Офис 1: г. Санкт - Петербург'
+              addressText='Саперный переулок дом 6, пом. 38-Н, 191014'
+            />
+          </div>
+          <div className={cls.mapImgContainer}>
+            <Image src={map} alt='map' />
+            <MapCard
+              cityText='Офис 2: г. Санкт - Петербург'
+              addressText='Невский пр., 104, Санкт-Петербург, 191025'
+            />
+          </div>
+          <div className={cls.mapImgContainer}>
+            <Image src={map} alt='map' />
+            <MapCard
+              cityText='Офис 3: г. Санкт - Петербург'
+              addressText='15 Линия В.О., д 38/59, литер В, помещение 5-Н, 199178'
+            />
+          </div>{" "}
+          <div className={cls.mapImgContainer}>
+            <Image src={map} alt='map' />
+            <MapCard
+              cityText='Офис 4: г. Москва Тверская'
+              addressText='дом 27, строение 2, этаж 2, 199178'
+            />
+          </div>
+        </div>
+        <div style={{ minHeight: 400 }}></div>
+        <Footer isWhite isDark />
       </div>
     </>
   );

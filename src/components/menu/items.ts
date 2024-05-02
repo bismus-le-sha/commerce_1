@@ -13,7 +13,7 @@ export const items = [
   },
   {
     text: "Связь с нами",
-    href: "/contactUs",
+    href: "/contactsWithUs",
   },
   {
     text: "О нас",
