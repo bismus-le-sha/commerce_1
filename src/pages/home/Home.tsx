@@ -32,7 +32,7 @@ const Home = () => {
   const ref = useRef<Element | null | undefined>(null);
   const widgetRef = useRef<Element | null | undefined>(null);
   const inputRef = useRef<HTMLInputElement | null | undefined>(null);
-  const timeOut = useRef<number>();
+  const timeOut = useRef<NodeJS.Timeout>();
 
   useEffect(() => {
     timeOut.current = setTimeout(() => {
