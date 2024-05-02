@@ -252,6 +252,7 @@
   gap: 80px;
   justify-content: space-around;
   align-items: center;
+  margin-bottom: 40px;
 }
 
 .adsBlockTitle {
@@ -261,6 +262,25 @@
   text-align: center;
   font-weight: 400;
   font-family: Playfair Display, sans-serif;
+}
+
+.roomImageContainer {
+  max-width: 1678px;
+  max-height: 750px;
+  width: 100vw;
+  height: 100vh;
+  background-color: #222222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.roomImg {
+  max-width: 1612px;
+  max-height: 700px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 @media (max-width: 1400px) {

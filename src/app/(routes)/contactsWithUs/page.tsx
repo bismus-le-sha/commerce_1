@@ -98,7 +98,13 @@ const ContactsWithUsPage = () => {
               </div>
             </div>
           </div>
-          <Image src={roomImg} alt='room' />
+          <div className={classnames(cls.roomImageContainer)}>
+            <Image
+              className={classnames(cls.roomImg)}
+              src={roomImg}
+              alt='room'
+            />
+          </div>
         </main>
       </div>
     </>
