@@ -34,7 +34,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
       <head>
         <script src='https://app.allwidgets.ru/s/callback/89297077-04e6-4487-b666-2f7d2f4336c8/'></script>
         <link rel='preconnect' href='https://fonts.googleapis.com' />
-        <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+        <link rel='preconnect' href='https://fonts.gstatic.com' />
         <link
           href='https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap'
           rel='stylesheet'
