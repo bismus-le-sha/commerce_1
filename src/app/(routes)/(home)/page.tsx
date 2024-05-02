@@ -7,7 +7,7 @@ import main3 from "../../../assets/bg-3.png";
 import main4 from "../../../assets/bg-4.png";
 import { SwiperComponent } from "../../../components/swiper/Swiper";
 
-import cls from "../../../pages/home/home.module.css";
+import cls from "../../../_pages/home/home.module.css";
 import { items } from "../../../components/menu/items";
 
 const swiperItems = [

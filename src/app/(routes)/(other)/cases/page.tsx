@@ -2,8 +2,8 @@
 
 import { useEffect, useState } from "react";
 
-import cls from "../../../../pages/cases/menu.module.css";
-import clsText from "../../../../pages/cases/text.module.css";
+import cls from "../../../../_pages/cases/menu.module.css";
+import clsText from "../../../../_pages/cases/text.module.css";
 import classnames from "classnames";
 import MainCase from "../../../../components/mainCase/MainCase";
 import Cards from "@/components/cards/Cards";

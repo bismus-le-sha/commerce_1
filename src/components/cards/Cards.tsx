@@ -2,7 +2,7 @@ import React from "react";
 
 import casePortfolio from "../../assets/casePortfolio.svg";
 import CaseCard from "../../components/caseCard/CaseCard";
-import cls from "../../pages/cases/menu.module.css";
+import cls from "../../_pages/cases/menu.module.css";
 
 const Cards = () => {
   return (
