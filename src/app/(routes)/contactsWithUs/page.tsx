@@ -6,9 +6,12 @@ import "../../../components/swiper/swiper.css";
 import cls from "../../../styles/menuContactWithMe.module.css";
 import classnames from "classnames";
 import Link from "next/link";
+import Image from "next/image";
+import roomImg from "@/assets/room.png";
+
 import { items } from "../../../components/menu/items";
 
-const ContactsWithUsPage = ({ children }: { children: ReactNode }) => {
+const ContactsWithUsPage = () => {
   const [isMedia, setIsMedia] = useState<boolean>(false);
 
   useEffect(() => {
@@ -95,6 +98,7 @@ const ContactsWithUsPage = ({ children }: { children: ReactNode }) => {
               </div>
             </div>
           </div>
+          <Image src={roomImg} alt='room' />
         </main>
       </div>
     </>
