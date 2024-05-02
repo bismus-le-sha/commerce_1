@@ -1,0 +1,219 @@
+.caseCard {
+  width: 100vw;
+  height: 100vh;
+  max-width: 270px;
+  max-height: 390px;
+  background-color: #222222;
+  color: #fff;
+  border-radius: 30px;
+  text-align: center;
+  padding: 10px 0;
+  margin-bottom: 10px;
+}
+
+.caseImgContainer {
+  width: 100vw;
+  height: 100vh;
+  max-width: 250px;
+  max-height: 300px;
+  background-color: #c7c7c7;
+  margin-bottom: 5px;
+  margin-bottom: 5px;
+  border-radius: 30px;
+  margin: 0 auto;
+  margin-bottom: 3px;
+}
+
+.img {
+  width: 100%;
+  object-fit: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  max-height: 570px;
+  margin-bottom: 5px;
+  border-radius: 30px;
+  margin: 0 auto;
+  margin-bottom: 3px;
+}
+
+.img p {
+  color: #fff;
+}
+
+.img div {
+  color: #fff;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  height: 100%;
+  flex-direction: column;
+  max-width: 873px;
+  text-align: center;
+  margin: 0 auto;
+  gap: 10px;
+  padding-bottom: 10px;
+}
+
+.otherCases {
+  width: 100vw;
+  height: 100vh;
+  max-width: 210px;
+  max-height: 300px;
+}
+
+.cardInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 10px;
+  gap: 4px;
+  font-weight: 400;
+}
+
+.cardInfo span {
+  display: flex;
+  gap: 5px;
+}
+
+.name {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.position {
+  font-size: 10px;
+}
+
+.emailLink,
+.telLink {
+  color: #fff;
+  font-size: 10px;
+}
+
+@media (max-width: 1200px) {
+  .caseCard {
+    max-width: 220px;
+    max-height: 350px;
+  }
+  .caseImgContainer {
+    max-width: 200px;
+    max-height: 260px;
+  }
+
+  .otherCases {
+    max-width: 200px;
+    max-height: 260px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .caseCard {
+    max-width: 200px;
+    max-height: 310px;
+    border-radius: 20px;
+  }
+
+  .caseImgContainer {
+    max-width: 180px;
+    max-height: 220px;
+  }
+
+  .img p {
+    font-size: 12px;
+  }
+
+  .img h3 {
+    font-size: 15px;
+  }
+
+  .otherCases {
+    max-width: 180px;
+    max-height: 220px;
+  }
+}
+
+@media (max-width: 800px) {
+  .caseCard {
+    max-width: 170px;
+    max-height: 310px;
+  }
+
+  .caseImgContainer {
+    max-width: 160px;
+    max-height: 220px;
+  }
+
+  .otherCases {
+    max-width: 160px;
+    max-height: 220px;
+  }
+
+  .name {
+    font-size: 10px;
+  }
+
+  .position {
+    font-size: 7px;
+  }
+  .link {
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 700px) {
+  .caseCard {
+    max-width: 120px;
+    max-height: 270px;
+  }
+
+  .caseImgContainer {
+    max-width: 100px;
+    max-height: 180px;
+  }
+
+  .img {
+    height: 50vh;
+  }
+
+  .img p {
+    font-size: 8px;
+  }
+  .img h3 {
+    font-size: 12px;
+  }
+
+  .otherCases {
+    max-width: 100px;
+    max-height: 180px;
+  }
+
+  .link {
+    font-size: 6px;
+  }
+}
+
+@media (max-width: 600px) {
+  .img p {
+    font-size: 6px;
+  }
+
+  .img h3 {
+    font-size: 10px;
+  }
+  .caseImgContainer {
+    max-width: 120px;
+    max-height: 200px;
+  }
+
+  .caseCard {
+    max-width: 140px;
+    max-height: 290px;
+  }
+
+  .otherCases {
+    max-width: 120px;
+    max-height: 200px;
+  }
+}

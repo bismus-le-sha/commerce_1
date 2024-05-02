@@ -1,0 +1,711 @@
+.menuContainer {
+  display: flex;
+  justify-content: center;
+  /* max-width: 300px; */
+  /* max-height: 500px; */
+}
+
+.img {
+  width: 100%;
+  object-fit: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  max-height: 570px;
+  margin-bottom: 5px;
+  border-radius: 30px;
+  margin: 0 auto;
+  /* margin-bottom: 3px; */
+  margin-bottom: 15px;
+}
+
+.img p {
+  color: #fff;
+}
+
+.img div {
+  color: #fff;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  height: 100%;
+  flex-direction: column;
+  max-width: 873px;
+  text-align: center;
+  margin: 0 auto;
+  gap: 10px;
+  padding-bottom: 10px;
+}
+
+.otherCases {
+  width: 100vw;
+  height: 100vh;
+  max-width: 210px;
+  max-height: 300px;
+}
+
+.caseImgContainer {
+  width: 100vw;
+  height: 100vh;
+  max-width: 250px;
+  max-height: 300px;
+  background-color: #c7c7c7;
+  margin-bottom: 5px;
+  margin-bottom: 5px;
+  border-radius: 30px;
+  margin: 0 auto;
+  margin-bottom: 3px;
+}
+
+.mainCases {
+  width: 100%;
+}
+
+.caseCard {
+  width: 100vw;
+  height: 100vh;
+  max-width: 270px;
+  max-height: 390px;
+  background-color: #222222;
+  color: #fff;
+  border-radius: 30px;
+  text-align: center;
+  padding: 10px 0;
+  margin-bottom: 10px;
+}
+
+.cardInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 10px;
+  gap: 4px;
+  font-weight: 400;
+}
+
+.containerImage {
+  display: flex;
+  justify-content: space-between;
+  min-height: 570px;
+  gap: 60px;
+}
+
+.mobile ul {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-height: 40px;
+  margin-bottom: 40px;
+}
+
+.mobile > span {
+  display: none;
+}
+
+.mobile .menuItemText {
+  font-size: 10px;
+}
+
+.menu {
+  display: flex;
+  gap: 30px;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.menuItem a {
+  text-decoration: none;
+}
+
+.menuItemText {
+  color: #fff;
+}
+
+.smallLine {
+  display: block;
+  width: 160px;
+  height: 2px;
+  background-color: #fff;
+  margin-bottom: 5px;
+}
+
+.bigLine {
+  display: block;
+  width: 220px;
+  height: 2px;
+  margin-bottom: 5px;
+  background-color: #fff;
+}
+
+.marginBottomSmallLine {
+  margin-bottom: 30px;
+}
+
+.contacts {
+  display: flex;
+  justify-content: space-around;
+  gap: 40px;
+  margin-bottom: 40px;
+  align-items: center;
+  text-align: center;
+}
+
+.container {
+  max-width: 1700px;
+  margin: 0 auto;
+  padding: 30px 15px;
+  background-color: #282828;
+}
+.phoneLink {
+  color: #fff;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.cityTitle {
+  font-size: 24px;
+  color: #fff;
+}
+
+.active::after {
+  content: "";
+  position: absolute;
+}
+
+.mediaContainer {
+  max-width: 1240px;
+  min-height: 100%;
+}
+
+.mediaContainer .case1 {
+  height: 100vh;
+  width: calc(100vw - 100px);
+}
+
+.name {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.cardInfo span {
+  display: flex;
+  gap: 5px;
+}
+
+.emailLink,
+.telLink {
+  color: #fff;
+  font-size: 10px;
+}
+
+.position {
+  font-size: 10px;
+}
+
+.casesCards {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  width: 330px;
+  height: 100px;
+  background-image: url(../assets/logoWhite.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.adsLogo {
+  width: 300px;
+  height: 90px;
+  background-image: url(../assets/logoWhite.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 auto;
+}
+.adsLogoContainer {
+  max-width: 430px;
+  max-height: 130px;
+  height: 100vh;
+  width: 100vw;
+  background-color: #222222;
+  align-items: center;
+  border-radius: 30px;
+}
+
+.positionLogo {
+  max-width: 338px;
+  max-height: 130px;
+  width: 100vw;
+  height: 100vh;
+  margin: auto auto;
+  padding: 15px 0px;
+}
+
+.adsBlock {
+  display: flex;
+  gap: 80px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.adsBlockTitle {
+  color: white;
+  font-size: 28px;
+  display: block;
+  text-align: center;
+  font-weight: 400;
+  font-family: Playfair Display, sans-serif;
+}
+
+@media (max-width: 1400px) {
+  .contacts {
+    gap: 20px;
+  }
+  .logo {
+    width: 300px;
+    height: 90px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .phoneLink,
+  .cityTitle {
+    font-size: 16px;
+  }
+  .menuItemText {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .containerImage {
+    min-height: 470px;
+  }
+
+  .logo {
+    width: 250px;
+    height: 70px;
+  }
+  .otherCases {
+    max-width: 200px;
+    max-height: 260px;
+  }
+  .caseImgContainer {
+    max-width: 200px;
+    max-height: 260px;
+  }
+  .caseCard {
+    max-width: 220px;
+    max-height: 350px;
+  }
+  .adsLogo {
+    width: 230px;
+    height: 70px;
+  }
+
+  .adsLogoContainer {
+    max-width: 370px;
+    max-height: 100px;
+  }
+
+  .positionLogo {
+    max-width: 270px;
+    max-height: 80px;
+  }
+  .adsBlock {
+    gap: 50px;
+  }
+  .adsBlockTitle {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .phoneLink {
+    font-size: 20px;
+  }
+  .cityTitle {
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  .logo {
+    width: 200px;
+    height: 60px;
+  }
+  .containerImage {
+    gap: 10px;
+  }
+
+  .phoneLink,
+  .cityTitle {
+    font-size: 12px;
+  }
+  .menuItemText {
+    font-size: 10px;
+  }
+
+  .otherCases {
+    max-width: 180px;
+    max-height: 220px;
+  }
+
+  .caseImgContainer {
+    max-width: 180px;
+    max-height: 220px;
+  }
+  .caseCard {
+    max-width: 200px;
+    max-height: 310px;
+  }
+
+  .smallLine {
+    width: 120px;
+  }
+
+  .bigLine {
+    width: 165px;
+  }
+
+  .img p {
+    font-size: 12px;
+  }
+
+  .img h3 {
+    font-size: 15px;
+  }
+  .menu {
+    gap: 15px;
+  }
+
+  .adsLogoContainer {
+    max-width: 330px;
+    max-height: 80px;
+  }
+
+  .positionLogo {
+    max-width: 230px;
+    max-height: 60px;
+  }
+  .adsBlock {
+    gap: 35px;
+  }
+  .adsBlockTitle {
+    font-size: 14px;
+  }
+  .adsLogo {
+    width: 180px;
+    height: 54px;
+  }
+}
+
+@media (max-width: 800px) {
+  .contacts {
+    gap: 20px;
+  }
+
+  .otherCases {
+    max-width: 130px;
+    max-height: 220px;
+  }
+
+  .caseImgContainer {
+    max-width: 130px;
+    max-height: 220px;
+  }
+
+  .caseCard {
+    max-width: 100px;
+    max-height: 310px;
+  }
+
+  .caseCard {
+    max-width: 150px;
+    max-height: 310px;
+  }
+
+  .smallLine {
+    width: 90px !important;
+  }
+
+  .bigLine {
+    width: 115px !important;
+  }
+
+  .name {
+    font-size: 10px;
+  }
+
+  .position {
+    font-size: 7px;
+  }
+
+  .emailLink,
+  .telLink {
+    font-size: 7px;
+  }
+  .logo {
+    width: 130px;
+    height: 39px;
+  }
+
+  .adsBlock {
+    gap: 15px;
+  }
+  .adsBlockTitle {
+    font-size: 10px;
+  }
+
+  .adsLogoContainer {
+    max-width: 200px;
+    max-height: 70px;
+  }
+  .adsLogo {
+    width: 110px;
+    height: 33px;
+  }
+
+  .positionLogo {
+    max-width: 200px;
+    max-height: 70px;
+  }
+}
+
+@media (max-width: 700px) {
+  .menu {
+    gap: 20px;
+  }
+
+  .bigLine {
+    width: 180px;
+  }
+  .smallLine {
+    width: 120px;
+  }
+
+  .contacts {
+    gap: 24px;
+  }
+
+  .phoneLink {
+    font-size: 15px;
+  }
+
+  .cityTitle {
+    font-size: 15px;
+  }
+  .logo {
+    width: 150px;
+    height: 45px;
+  }
+
+  .containerImage {
+    gap: 15px;
+  }
+
+  .img {
+    height: 50vh;
+  }
+
+  .otherCases {
+    max-width: 100px;
+    max-height: 180px;
+  }
+
+  .caseImgContainer {
+    max-width: 100px;
+    max-height: 180px;
+  }
+
+  .caseCard {
+    max-width: 120px;
+    max-height: 270px;
+  }
+
+  .smallLine {
+    width: 65px !important;
+  }
+
+  .bigLine {
+    width: 85px !important;
+  }
+  .img p {
+    font-size: 8px;
+  }
+  .img h3 {
+    font-size: 12px;
+  }
+  .casePortfolio {
+    width: 70px;
+    height: 7px;
+  }
+
+  .link {
+    font-size: 6px;
+  }
+  .menuItem:first-child {
+    margin-top: 0;
+  }
+  .menuItem:last-child {
+    margin-bottom: 0;
+  }
+
+  .menuContainer {
+    max-width: none;
+  }
+
+  .adsBlockTitle {
+    font-size: 8px;
+  }
+
+  .adsLogoContainer {
+    max-width: 150px;
+    max-height: 50px;
+  }
+  .adsLogo {
+    width: 90px;
+    height: 26px;
+  }
+
+  .positionLogo {
+    max-width: 150px;
+    max-height: 50px;
+  }
+
+  .adsBlock {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .contacts {
+    gap: 16px;
+  }
+
+  .phoneLink {
+    font-size: 12px;
+  }
+
+  .cityTitle {
+    font-size: 12px;
+  }
+
+  .img p {
+    font-size: 6px;
+  }
+
+  .img h3 {
+    font-size: 10px;
+  }
+  .containerImage {
+    flex-direction: column;
+  }
+  .casesCards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: initial;
+    gap: 20px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .menu {
+    gap: 15px;
+  }
+
+  .marginBottomSmallLine {
+    margin-bottom: 22px;
+  }
+  .contacts {
+    gap: 24px;
+  }
+
+  .smallLine {
+    display: none;
+  }
+  .bigLine {
+    display: none;
+  }
+
+  .logo {
+    width: 100px;
+    height: 30px;
+  }
+
+  .adsBlockTitle {
+    font-size: 7px;
+  }
+
+  .adsLogoContainer {
+    max-width: 110px;
+    max-height: 50px;
+  }
+  .adsLogo {
+    width: 71px;
+    height: 21px;
+  }
+
+  .positionLogo {
+    max-width: 110px;
+    max-height: 40px;
+  }
+}
+
+@media (max-width: 400px) {
+  .logo {
+    width: 70px;
+    height: 20px;
+  }
+
+  .cityTitle {
+    font-size: 8px;
+  }
+
+  .phoneLink {
+    font-size: 8px;
+  }
+
+  .casesCards {
+    gap: 5px;
+  }
+
+  .menuItemText {
+    font-size: 8px !important;
+  }
+
+  .adsLogoContainer {
+    max-width: 90px;
+    max-height: 45px;
+  }
+  .adsLogo {
+    width: 57px;
+    height: 17px;
+  }
+
+  .positionLogo {
+    max-width: 90px;
+    max-height: 45px;
+  }
+}
+
+.burgerMenu {
+  width: 24px;
+  height: 24px;
+}
+
+.visible {
+  visibility: visible;
+}
+
+@media (max-width: 300px) {
+  .casesCards {
+    gap: 10px;
+  }
+}
