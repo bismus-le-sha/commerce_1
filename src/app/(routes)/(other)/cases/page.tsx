@@ -5,6 +5,7 @@ import clsText from "../../../../_pages/cases/text.module.css";
 import classnames from "classnames";
 import MainCase from "../../../../components/mainCase/MainCase";
 import Cards from "@/components/cards/Cards";
+import ContactsWithUs from "./ContactsWithUs";
 
 const CasesPage = () => {
   return (
@@ -74,7 +75,6 @@ const CasesPage = () => {
             </p>
           }
         />
-
         <MainCase
           className={cls.case2}
           text={
@@ -218,6 +218,7 @@ const CasesPage = () => {
           }
           mainText={""}
         />
+        <ContactsWithUs />
       </div>
       <Cards />
     </>
