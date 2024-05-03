@@ -23,6 +23,16 @@
   color: #fff;
 }
 
+.sertificats {
+  display: flex;
+  gap: 30px;
+}
+
+.sertificats img {
+  width: 100%;
+  height: 100%;
+}
+
 .arbitrationImgContainer {
   padding: 15px;
 }

@@ -19,7 +19,7 @@ import letter2 from "@/assets/Group 95.png";
 import allLetter from "@/assets/Group 97.png";
 import Footer from "@/components/footer/footer";
 
-export const Page = ({ children }: { children: ReactNode }) => {
+export const Page = () => {
   const [isMedia, setIsMedia] = useState<boolean>(false);
   const pathname = usePathname();
   const isDark = pathname === "/arbitration";
@@ -325,7 +325,7 @@ export const Page = ({ children }: { children: ReactNode }) => {
                     </p>
                   </div>
                 </div>
-                {/* <div
+                <div
                   style={{
                     display: "flex",
                     flexDirection: "column",
@@ -334,7 +334,7 @@ export const Page = ({ children }: { children: ReactNode }) => {
                     gap: 40,
                   }}
                 >
-                  <div style={{ display: "flex" }}>
+                  <div className={clsx.sertificats}>
                     <div>
                       <Image src={letter1} alt='letter1' />
                     </div>
@@ -347,13 +347,13 @@ export const Page = ({ children }: { children: ReactNode }) => {
                       style={{
                         color: "transparent",
                         width: "100%",
-                        height: "100",
+                        height: "100%",
                       }}
                       src={allLetter}
                       alt='allLetter'
                     />
                   </div>
-                </div> */}
+                </div>
               </div>
             </div>
 
