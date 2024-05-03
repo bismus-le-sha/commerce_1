@@ -1,6 +1,10 @@
+"use client";
+
 import classnames from "classnames";
 import cls from "./footer.module.css";
 import { items } from "../menu/items";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
 interface FooterProps {
   isWhite?: boolean;
@@ -9,16 +13,41 @@ interface FooterProps {
 
 const Footer = (props: FooterProps) => {
   const { isWhite, isDark } = props;
+  const pathname = usePathname();
+  const isDarkFooter = pathname === "/arbitration";
+  const [isWhiteFooter, setIsWhiteFooter] = useState(false);
+
+  useEffect(() => {
+    setIsWhiteFooter(pathname === "/cases");
+  }, []);
+
+  const whiteStyle = {
+    color: (isDarkFooter || isWhite) && !isWhiteFooter ? "#fff" : "#000",
+  };
+
+  const whiteBgStyle = {
+    backgroundColor: isDarkFooter ? "#fff" : "",
+  };
+
   return (
     <>
-      <div style={{ backgroundColor: isDark ? "#222222" : "" }}>
+      <div
+        style={{
+          backgroundColor: isDark || isDarkFooter ? "#222222" : "",
+          maxWidth: 1700,
+          margin: "0 auto",
+          padding: "0 20px",
+        }}
+      >
         <div className={cls.linksBeforeFooterContainer}>
           <ul className={cls.linksBeforeFooterList}>
             {items.map(({ text, href }) => {
               return (
                 <li key={text} className={cls.linksBeforeFooterItem}>
                   <a
-                    style={{ color: isWhite ? "white" : "" }}
+                    style={{
+                      ...whiteStyle,
+                    }}
                     className={cls.linksBeforeFooterLink}
                     href={href}
                   >
@@ -30,7 +59,10 @@ const Footer = (props: FooterProps) => {
           </ul>
         </div>
       </div>
-      <footer className={cls.footer}>
+      <footer
+        style={{ maxWidth: 1700, margin: "0 auto" }}
+        className={cls.footer}
+      >
         <div className={cls.footerContainer}>
           <div className={cls.footerLeft}>
             <a

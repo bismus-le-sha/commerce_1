@@ -63,6 +63,9 @@
   position: absolute;
 }
 
+.activeLink {
+}
+
 @media (max-width: 1000px) {
   .phoneLink {
     font-size: 20px;

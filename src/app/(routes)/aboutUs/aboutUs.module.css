@@ -1,0 +1,217 @@
+.arbitrationContainer {
+  display: flex;
+  flex-direction: column;
+  max-width: 1050px;
+  min-height: 402px;
+}
+
+.arbitrationItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
+  background-color: #282828;
+}
+
+.arbitrationItem p {
+  font-family: Open Sans;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 32px;
+  letter-spacing: 0.04em;
+  text-align: left;
+  color: #fff;
+}
+
+.arbitrationImgContainer {
+  padding: 15px;
+}
+
+.arbitrationTextContainer {
+  padding: 20px;
+}
+
+.arbitrationImgContainer img {
+  width: 100%;
+  height: 100%;
+}
+
+.arbitrationImgContainer {
+  max-width: 450px;
+  max-height: 380px;
+  height: 100vh;
+  width: 100vw;
+}
+
+.headerTitle {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.infoCards {
+  display: flex;
+  margin-bottom: 40px;
+  gap: 15px;
+}
+
+.infoCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 360px;
+  min-height: 165px;
+  padding: 8px;
+  text-align: center;
+  border-radius: 20px;
+  border: 1px solid #000;
+  font-size: 14px;
+  font-weight: 300;
+  font-family: Open Sans, sans-serif;
+}
+
+.someProjectTitle {
+  font-family: Playfair Display;
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 71.25px;
+  letter-spacing: 0.15em;
+  text-align: left;
+  border-bottom: 1px solid #000;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+.clickableCard {
+  border-bottom: 1px solid #000;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+.clickableCard h3 {
+  font-family: Open Sans;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 38.4px;
+  letter-spacing: 0.17em;
+  text-align: left;
+}
+
+.clickableCard button {
+  border: none;
+  background: transparent;
+}
+
+.clickableCard p {
+  font-family: Open Sans;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 29.69px;
+  letter-spacing: 0.08em;
+  text-align: justify;
+}
+
+.redText {
+  color: red;
+  font-family: Open Sans;
+  font-size: 24px !important;
+  font-weight: 400;
+  line-height: 38.4px;
+  letter-spacing: 0.17em;
+  text-align: left;
+  display: inline;
+}
+
+@media (max-width: 1600px) {
+  .arbitrationItem p {
+    font-family: Open Sans;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 32px;
+    letter-spacing: 0.04em;
+    text-align: left;
+    color: #fff;
+  }
+}
+
+@media (max-width: 1500px) {
+  .arbitrationItem p {
+    font-family: Open Sans;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 32px;
+    letter-spacing: 0.04em;
+    text-align: left;
+    color: #fff;
+  }
+
+  .arbitrationImgContainer {
+    max-width: 400px;
+    max-height: 340px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .arbitrationItem p {
+    font-family: Open Sans;
+    font-size: 10px;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    text-align: left;
+    color: #fff;
+  }
+}
+
+@media (max-width: 1000px) {
+  .arbitrationItem p {
+    font-size: 8px;
+  }
+
+  .clickableCard h3 {
+    font-family: Open Sans;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 38.4px;
+    letter-spacing: 0.17em;
+    text-align: left;
+  }
+
+  .redText {
+    font-family: Open Sans;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 38.4px;
+    letter-spacing: 0.17em;
+    text-align: left;
+  }
+
+  .clickableCard p {
+    font-size: 14px;
+  }
+
+  .infoCards {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .infoCard {
+    font-size: 12px;
+  }
+
+  .someProjectTitle {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 900px) {
+  .arbitrationItem {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  .arbitrationItem p {
+    font-size: 6px;
+  }
+}

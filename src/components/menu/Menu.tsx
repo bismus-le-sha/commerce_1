@@ -5,13 +5,20 @@ import { items } from "./items";
 import cls from "./Menu.module.css";
 import classnames from "classnames";
 import burgerMenu from "../../assets/burgerMenu.svg";
+import { usePathname } from "next/navigation";
 
 import Image from "next/image";
 import Link from "next/link";
 
-const Menu = () => {
+interface MenuProps {
+  isWhite?: boolean;
+}
+
+const Menu = (props: MenuProps) => {
+  const { isWhite } = props;
   const [isVisible, setIsVisible] = useState(false);
   const [isMedia, setIsMedia] = useState<boolean>(false);
+  const pathname = usePathname();
 
   const mods = {
     [cls.visible]: isVisible,
@@ -20,6 +27,14 @@ const Menu = () => {
   useEffect(() => {
     setIsMedia(document.body.clientWidth <= 500);
   }, []);
+
+  const whiteStyle = {
+    color: isWhite ? "#fff" : "",
+  };
+
+  const whiteBackgroundStyle = {
+    backgroundColor: isWhite ? "#fff" : "",
+  };
 
   return (
     <>
@@ -32,35 +47,60 @@ const Menu = () => {
         />
       )}
       <div className={classnames(cls.menuContainer, mods)}>
-        <span className={cls.smallLine}></span>
-        <span className={cls.bigLine}></span>
+        <span style={whiteBackgroundStyle} className={cls.smallLine}></span>
+        <span style={whiteBackgroundStyle} className={cls.bigLine}></span>
         <ul className={cls.menu}>
           {items.map(({ text, href }) => {
+            console.log(pathname, "pathname");
+            console.log(href, "href");
+
             return (
               <li className={cls.menuItem} key={text}>
                 <Link href={href}>
-                  <span className={cls.menuItemText}>{text}</span>
+                  <span
+                    style={{
+                      ...whiteStyle,
+                      borderBottom:
+                        pathname === href ? "1px solid #000" : "none",
+                    }}
+                    className={cls.menuItemText}
+                  >
+                    {text}
+                  </span>
                 </Link>
               </li>
             );
           })}
         </ul>
-        <span className={cls.bigLine}></span>
+        <span style={whiteBackgroundStyle} className={cls.bigLine}></span>
         <span
+          style={whiteBackgroundStyle}
           className={[cls.smallLine, cls.marginBottomSmallLine].join(" ")}
         ></span>
         <div className={cls.contacts}>
           <div>
-            <a className={cls.phoneLink} href='tel:+78129423290'>
+            <a
+              style={whiteStyle}
+              className={cls.phoneLink}
+              href='tel:+78129423290'
+            >
               +7 (812) 942-32-90
             </a>
-            <h2 className={cls.cityTitle}>Санкт-Петербург</h2>
+            <h2 style={whiteStyle} className={cls.cityTitle}>
+              Санкт-Петербург
+            </h2>
           </div>
           <div>
-            <a className={cls.phoneLink} href='tel:+78129423290'>
+            <a
+              style={whiteStyle}
+              className={cls.phoneLink}
+              href='tel:+78129423290'
+            >
               +7 (812) 942-32-90
             </a>
-            <h2 className={cls.cityTitle}>Москва</h2>
+            <h2 style={whiteStyle} className={cls.cityTitle}>
+              Москва
+            </h2>
           </div>
         </div>
       </div>

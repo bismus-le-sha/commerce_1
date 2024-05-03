@@ -9,6 +9,11 @@ import { SwiperComponent } from "../../../components/swiper/Swiper";
 
 import cls from "../../../_pages/home/home.module.css";
 import { items } from "../../../components/menu/items";
+import { useEffect, useState } from "react";
+import { useInView } from "react-intersection-observer";
+import Menu from "@/components/menu/Menu";
+import Link from "next/link";
+import BeforeFooterBlock from "@/components/beforeFooterBlock/BeforeFooterBlock";
 
 const swiperItems = [
   {
@@ -30,9 +35,35 @@ const swiperItems = [
 ];
 
 const Home = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  const { ref, inView } = useInView({
+    threshold: 0,
+  });
+
+  useEffect(() => {
+    setIsMobile(document.body.clientWidth >= 1000);
+  }, []);
+
   return (
     <>
+      <div
+        ref={ref}
+        style={{ width: "100vw", height: "100vh", position: "absolute" }}
+      ></div>
       <SwiperComponent items={swiperItems} />
+      {!inView && isMobile && (
+        <div style={{ position: "fixed", top: "0", width: "100vw" }}>
+          <div className='headerContainer'>
+            <div className='menuHeaderContainer'>
+              <Menu isWhite />
+            </div>
+            <Link style={{ maxHeight: "80px" }} href={"/"}>
+              <div className={classnames("logo", cls.logoWhite)}></div>
+            </Link>
+          </div>
+        </div>
+      )}
       <div>
         <div className={[cls.main5, cls.bg].join(" ")}>
           <div className={cls.arbitration}>
@@ -190,19 +221,7 @@ const Home = () => {
         </div>
       </div>
       <div>
-        <div className={cls.linksBeforeFooterContainer}>
-          <ul className={cls.linksBeforeFooterList}>
-            {items.map(({ text, href }) => {
-              return (
-                <li key={text} className={cls.linksBeforeFooterItem}>
-                  <a className={cls.linksBeforeFooterLink} href={href}>
-                    {text}
-                  </a>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
+        <BeforeFooterBlock />
       </div>
       <footer className={cls.footer}>
         <div className={cls.footerContainer}>

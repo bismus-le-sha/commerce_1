@@ -13,9 +13,11 @@ import map from "@/assets/map.png";
 import { items } from "../../../components/menu/items";
 import Footer from "@/components/footer/footer";
 import MapCard from "@/components/mapCard/MapCard";
+import { usePathname } from "next/navigation";
 
 const ContactsWithUsPage = () => {
   const [isMedia, setIsMedia] = useState<boolean>(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     setIsMedia(document.body.clientWidth <= 700);
@@ -32,14 +34,19 @@ const ContactsWithUsPage = () => {
                   {items.map(({ text, href }) => {
                     return (
                       <li className={cls.menuItem} key={text}>
-                        <Link href={href}>
+                        <Link
+                          style={{
+                            borderBottom:
+                              pathname === href ? "1px solid #fff" : "none",
+                          }}
+                          href={href}
+                        >
                           <span className={cls.menuItemText}>{text}</span>
                         </Link>
                       </li>
                     );
                   })}
                 </ul>
-                <div></div>
               </div>
             )}
             <div>

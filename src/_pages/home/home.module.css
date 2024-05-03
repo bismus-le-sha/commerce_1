@@ -199,6 +199,10 @@
   color: #fff;
 }
 
+.logoWhite {
+  background-image: url(../../assets/logoWhite.svg) !important;
+}
+
 .many {
   display: flex;
   justify-content: center;

@@ -34,7 +34,12 @@ const textItems = [
   },
 ];
 
-export const SwiperComponent = ({ items }: { items: Item[] }) => {
+export const SwiperComponent = ({
+  items,
+}: {
+  items: Item[];
+
+}) => {
   return (
     <div>
       <Swiper

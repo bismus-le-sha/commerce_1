@@ -1,8 +1,8 @@
 "use client";
 
-import casePortfolio from "../../assets/casePortfolio.svg";
-import CaseCard from "../../components/caseCard/CaseCard";
-import cls from "../../_pages/cases/menu.module.css";
+import casePortfolio from "../../../assets/casePortfolio.svg";
+import CaseCard from "../../../components/caseCard/CaseCard";
+import cls from "./card.module.css";
 import { usePathname } from "next/navigation";
 
 const Cards = () => {

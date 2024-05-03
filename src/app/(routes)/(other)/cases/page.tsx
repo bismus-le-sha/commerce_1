@@ -1,7 +1,5 @@
 "use client";
 
-import { useEffect, useState } from "react";
-
 import cls from "../../../../_pages/cases/menu.module.css";
 import clsText from "../../../../_pages/cases/text.module.css";
 import classnames from "classnames";
@@ -17,6 +15,7 @@ const CasesPage = () => {
           text={
             'Адвокат Грабовский Анатолий Аркадьевич юридического бюро "Де-Юрекс", действуя в интересах своего клиента ООО «КМЗ», добился в Роспатенте признания недействительным патента Российской Федерации...'
           }
+          isButtonActive
           mainText={
             <p>
               Адвокат Грабовский Анатолий Аркадьевич юридического бюро
@@ -81,6 +80,7 @@ const CasesPage = () => {
           text={
             '14 апреля 2019 года в ресторане "Зейтун" в Санкт-Петербурге во время проведения свадьбы произошло нападение, в результате  которого Гусейнзаде (ранее ошибочно опознан как Гейдаров) Ильхам нанес шесть ножевых ударов другому мужчине...'
           }
+          isButtonActive
           mainText={
             <div className={classnames(clsText.mainTextContainer)}>
               <div className={classnames(clsText.selectedTriangleText)}>

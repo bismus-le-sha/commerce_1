@@ -64,51 +64,51 @@
 }
 
 .case1 {
-  background-image: url("../../assets/case-1.png");
+  background-image: url("../../../assets/case-1.png");
 }
 
 .case2 {
-  background-image: url("../../assets/case-2.png");
+  background-image: url("../../../assets/case-2.png");
 }
 
 .case3 {
-  background-image: url("../../assets/case-3.png");
+  background-image: url("../../../assets/case-3.png");
 }
 
 .case4 {
-  background-image: url("../../assets/case-4.png");
+  background-image: url("../../../assets/case-4.png");
 }
 
 .case5 {
-  background-image: url("../../assets/case-5.png");
+  background-image: url("../../../assets/case-5.png");
 }
 
 .case-1 {
-  background-image: url("../../assets/case_1.png");
+  background-image: url("../../../assets/case_1.png");
 }
 
 .case-2 {
-  background-image: url("../../assets/case_2.png");
+  background-image: url("../../../assets/case_2.png");
 }
 
 .case-3 {
-  background-image: url("../../assets/case_3.png");
+  background-image: url("../../../assets/case_3.png");
 }
 
 .case-4 {
-  background-image: url("../../assets/case_4.png");
+  background-image: url("../../../assets/case_4.png");
 }
 
 .case-5 {
-  background-image: url("../../assets/case_5.png");
+  background-image: url("../../../assets/case_5.png");
 }
 
 .case-6 {
-  background-image: url("../../assets/case_6.png");
+  background-image: url("../../../assets/case_6.png");
 }
 
 .case-7 {
-  background-image: url("../../assets/case_7.png");
+  background-image: url("../../../assets/case_7.png");
 }
 
 .caseCard {
@@ -265,7 +265,25 @@
 }
 
 .logoWhite {
-  background-image: url(../../assets/logoWhite.svg) !important;
+  background-image: url(../../../assets/logoWhite.svg) !important;
+}
+
+.mainContentContainer {
+  display: flex;
+  gap: 40px;
+}
+
+@media (max-width: 1500px) {
+  .mainContentContainer {
+    flex-direction: column;
+  }
+  .casesCards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: initial;
+    gap: 20px;
+    justify-content: center;
+  }
 }
 
 @media (max-width: 1200px) {

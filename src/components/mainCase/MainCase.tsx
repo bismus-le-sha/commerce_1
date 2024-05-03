@@ -14,16 +14,17 @@ interface MainCaseProps {
   className: string;
   text: string;
   mainText: ReactNode;
+  isButtonActive?: boolean;
 }
 
 const MainCase = (props: MainCaseProps) => {
   const [isOpen, setIsOpen] = useState(false);
-  const { text, img, className, mainText } = props;
+  const { text, className, mainText, isButtonActive } = props;
   const handleClick = () => {
     setIsOpen((prev) => !prev);
   };
 
-  const polygon = isOpen ? polygonBack : polygonForward;
+  const polygon = isButtonActive && (isOpen ? polygonBack : polygonForward);
 
   const mods = { [cls.open]: isOpen };
 
@@ -34,9 +35,11 @@ const MainCase = (props: MainCaseProps) => {
           <div className={cls.imgContainer}>
             <p>{text}</p>
 
-            <button onClick={handleClick}>
-              <Image src={polygon} alt='logo' />
-            </button>
+            {isButtonActive && (
+              <button onClick={handleClick}>
+                <Image src={polygon} alt='logo' />
+              </button>
+            )}
           </div>
         </div>
       )}
@@ -44,17 +47,21 @@ const MainCase = (props: MainCaseProps) => {
         <>
           <div className={classnames(cls.img, className, mods)}>
             <div className={cls.imgContainer}>
-              <button onClick={handleClick}>
-                <Image src={polygon} alt='logo' />
-              </button>
+              {isButtonActive && (
+                <button onClick={handleClick}>
+                  <Image src={polygon} alt='logo' />
+                </button>
+              )}
             </div>
           </div>
           <div>
             <p className={cls.mainText}>{mainText}</p>
             <div className={cls.caseButtonContainer}>
-              <button onClick={handleClick}>
-                <Image src={polygonBlackBack} alt='logo' />
-              </button>
+              {isButtonActive && (
+                <button onClick={handleClick}>
+                  <Image src={polygonBlackBack} alt='logo' />
+                </button>
+              )}
             </div>
           </div>
         </>

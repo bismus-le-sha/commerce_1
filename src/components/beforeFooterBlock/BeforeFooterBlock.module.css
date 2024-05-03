@@ -1,0 +1,59 @@
+.linksBeforeFooterContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.linksBeforeFooterList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  min-height: 150px;
+}
+
+.linksBeforeFooterLink {
+  text-decoration: none;
+  color: #000;
+  font-weight: 400;
+  font-size: 32px;
+}
+
+@media (max-width: 1000px) {
+  .linksBeforeFooterLink {
+    font-size: 24px;
+  }
+  .linksBeforeFooterList {
+    gap: 24px;
+    min-height: 120px;
+  }
+}
+
+@media (max-width: 800px) {
+  .linksBeforeFooterList {
+    gap: 16px;
+    min-height: 80px;
+  }
+}
+
+@media (max-width: 700px) {
+  .linksBeforeFooterLink {
+    font-size: 16px;
+  }
+  .linksBeforeFooterList {
+    gap: 15px;
+    min-height: 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  .linksBeforeFooterLink {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 400px) {
+  .linksBeforeFooterLink {
+    font-size: 8px;
+  }
+}
