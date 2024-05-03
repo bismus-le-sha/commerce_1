@@ -19,7 +19,7 @@ import letter2 from "@/assets/Group 95.png";
 import allLetter from "@/assets/Group 97.png";
 import Footer from "@/components/footer/footer";
 
-export const Page = () => {
+const Page = () => {
   const [isMedia, setIsMedia] = useState<boolean>(false);
   const pathname = usePathname();
   const isDark = pathname === "/arbitration";
@@ -365,4 +365,5 @@ export const Page = () => {
     </>
   );
 };
+
 export default Page;
