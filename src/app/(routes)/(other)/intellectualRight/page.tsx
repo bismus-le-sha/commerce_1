@@ -11,12 +11,13 @@ import FullUnderLine from "@/components/fullUnderLine/FullUnderLine";
 import OpenCard from "@/components/openCard/openCard";
 import ObserverList from "@/components/ObserverList/ObserverList";
 import { useInView } from "react-intersection-observer";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 
 const Page = () => {
   const allElRef = useRef<HTMLOListElement | null>(null);
   const router = useRouter();
+  let observer = useRef<IntersectionObserver | null>();
   const {
     ref: trademarksRef,
     // inView: trademarksView,
@@ -53,31 +54,33 @@ const Page = () => {
     threshold: 0,
   });
 
-  let observer = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (entry.isIntersecting) {
-        allElRef.current?.querySelectorAll("li").forEach((item) => {
-          const idElement = entry.target.querySelector(".refElement");
-          if (
-            item.textContent?.toUpperCase() ===
-            idElement?.textContent?.toUpperCase()
-          ) {
-            item.classList.remove("unActive");
-            item.classList.add("active");
-            router.push(`/intellectualRight/#${idElement?.id}`);
-          }
+  useEffect(() => {
+    observer.current = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          allElRef.current?.querySelectorAll("li").forEach((item) => {
+            const idElement = entry.target.querySelector(".refElement");
+            if (
+              item.textContent?.toUpperCase() ===
+              idElement?.textContent?.toUpperCase()
+            ) {
+              item.classList.remove("unActive");
+              item.classList.add("active");
+              router.push(`/intellectualRight/#${idElement?.id}`);
+            }
 
-          if (
-            item.textContent?.toUpperCase() !==
-            idElement?.textContent?.toUpperCase()
-          ) {
-            item.classList.remove("active");
-            item.classList.remove("unActive");
-          }
-        });
-      }
+            if (
+              item.textContent?.toUpperCase() !==
+              idElement?.textContent?.toUpperCase()
+            ) {
+              item.classList.remove("active");
+              item.classList.remove("unActive");
+            }
+          });
+        }
+      });
     });
-  });
+  }, []);
 
   if (
     patentsEntry?.target &&
@@ -86,11 +89,13 @@ const Page = () => {
     brandProtectionEntry?.target &&
     trademarksEntry?.target
   ) {
-    observer.observe(trademarksEntry.target);
-    observer.observe(patentsEntry.target);
-    observer.observe(copyrightEntry.target);
-    observer.observe(commercialDesignationsEntry.target);
-    observer.observe(brandProtectionEntry.target);
+    if (observer.current) {
+      observer.current.observe(trademarksEntry.target);
+      observer.current.observe(patentsEntry.target);
+      observer.current.observe(copyrightEntry.target);
+      observer.current.observe(commercialDesignationsEntry.target);
+      observer.current.observe(brandProtectionEntry.target);
+    }
   }
 
   return (
