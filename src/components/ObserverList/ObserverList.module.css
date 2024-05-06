@@ -1,0 +1,10 @@
+.ObserverList {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+}
+
+.ObserverList a {
+  text-decoration: none;
+  color: white;
+}

@@ -1,3 +1,5 @@
+"use client";
+
 import { CSSProperties } from "react";
 import cls from "./List.module.css";
 
@@ -9,6 +11,8 @@ interface ListProps {
 
 const List = (props: ListProps) => {
   const { items, type = "disc", margin } = props;
+
+
   return (
     <>
       <div className={cls.List}>

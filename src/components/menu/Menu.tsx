@@ -81,7 +81,7 @@ const Menu = (props: MenuProps) => {
           <div>
             <a
               style={whiteStyle}
-              className={cls.phoneLink}
+              className={isWhite ? cls.phoneLinkWhite : cls.phoneLink}
               href='tel:+78129423290'
             >
               +7 (812) 942-32-90
@@ -93,7 +93,9 @@ const Menu = (props: MenuProps) => {
           <div>
             <a
               style={whiteStyle}
-              className={cls.phoneLink}
+              className={classnames(
+                isWhite ? cls.phoneLinkWhite : cls.phoneLink
+              )}
               href='tel:+78129423290'
             >
               +7 (812) 942-32-90

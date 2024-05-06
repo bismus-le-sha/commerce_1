@@ -51,7 +51,13 @@
 }
 
 .phoneLink {
-  color: #000;
+  color: #000 !important;
+  text-decoration: none;
+  font-size: 32px;
+}
+
+.phoneLinkWhite {
+  color: #fff !important;
   text-decoration: none;
   font-size: 32px;
 }
@@ -70,6 +76,9 @@
 
 @media (max-width: 1000px) {
   .phoneLink {
+    font-size: 20px;
+  }
+  .phoneLinkWhite {
     font-size: 20px;
   }
   .cityTitle {

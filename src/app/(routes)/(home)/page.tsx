@@ -36,16 +36,20 @@ const swiperItems = [
 const Home = () => {
   const [isMobile, setIsMobile] = useState(false);
 
-  const { ref, inView } = useInView({
+  const { ref, inView, entry } = useInView({
     threshold: 0,
   });
+
+
+  
+  console.log(entry);
 
   useEffect(() => {
     setIsMobile(document.body.clientWidth >= 1000);
   }, []);
 
   return (
-    <>
+    <div className={cls.rootDiv}>
       <div
         ref={ref}
         style={{ width: "100vw", height: "100vh", position: "absolute" }}
@@ -68,9 +72,9 @@ const Home = () => {
           <div className={cls.arbitration}>
             <h2 className={cls.mainTitleIntel}>АРБИТРАЖНЫЕ СПОРЫ</h2>
             <button className={cls.linkButton}>
-              <a className={cls.link} href=''>
+              <Link className={cls.link} href='/inheritance'>
                 ПОДРОБНЕЕ
-              </a>
+              </Link>
             </button>
           </div>
         </div>
@@ -88,9 +92,9 @@ const Home = () => {
                 cls.whiteColor,
               ].join(" ")}
             >
-              <a className={cls.link} href=''>
+              <Link className={cls.link} href='/intellectualRight'>
                 Подробнее
-              </a>
+              </Link>
             </button>
           </div>
           <div className={cls.intellectualRightRight}>
@@ -101,7 +105,9 @@ const Home = () => {
                   cls.listItem
                 )}
               >
-                товарные знаки
+                <Link href={"/intellectualRight/#trademarks"}>
+                  товарные знаки
+                </Link>
               </li>
               <li
                 className={classnames(
@@ -109,7 +115,7 @@ const Home = () => {
                   cls.listItem
                 )}
               >
-                патенты
+                <Link href={"/intellectualRight/#patents"}>патенты</Link>
               </li>
               <li
                 className={classnames(
@@ -117,7 +123,9 @@ const Home = () => {
                   cls.listItem
                 )}
               >
-                коммерческие обозначения
+                <Link href={"/intellectualRight/#commercial-designations"}>
+                  коммерческие обозначения
+                </Link>
               </li>
               <li
                 className={classnames(
@@ -125,7 +133,9 @@ const Home = () => {
                   cls.listItem
                 )}
               >
-                защита бренда в суде
+                <Link href={"/intellectualRight/#brand-protection"}>
+                  защита бренда в суде
+                </Link>
               </li>
               <li
                 className={classnames(
@@ -133,7 +143,9 @@ const Home = () => {
                   cls.listItem
                 )}
               >
-                авторское право
+                <Link href={"/intellectualRight/#copyright"}>
+                  авторское право
+                </Link>
               </li>
             </ul>
           </div>
@@ -144,19 +156,15 @@ const Home = () => {
           <div className={cls.inheritanceLeft}>
             <ul className={classnames(cls.inheritanceList, cls.list)}>
               <li className={classnames(cls.inheritanceListItem, cls.listItem)}>
-                товарные знаки
+                <Link href='/inheritance/#acceptance'>принятие наследства</Link>
               </li>
               <li className={classnames(cls.inheritanceListItem, cls.listItem)}>
-                патенты
+                <Link href='/inheritance/#support'>
+                  сопровождение наследственного дела
+                </Link>
               </li>
               <li className={classnames(cls.inheritanceListItem, cls.listItem)}>
-                коммерческие обозначения
-              </li>
-              <li className={classnames(cls.inheritanceListItem, cls.listItem)}>
-                защита бренда в суде
-              </li>
-              <li className={classnames(cls.inheritanceListItem, cls.listItem)}>
-                авторское право
+                <Link href='/inheritance/#disputes'>наследственные споры</Link>
               </li>
             </ul>
           </div>
@@ -171,9 +179,9 @@ const Home = () => {
                 cls.linkButton,
               ].join(" ")}
             >
-              <a className={cls.link} href=''>
+              <Link className={cls.link} href='/inheritance'>
                 Подробнее
-              </a>
+              </Link>
             </button>
           </div>
         </div>
@@ -215,7 +223,7 @@ const Home = () => {
               cls.manyText
             )}
           >
-            Больше услуг
+            <Link href={"/otherServices"}>Больше услуг</Link>
           </h2>
         </div>
       </div>
@@ -256,7 +264,7 @@ const Home = () => {
           </div>
         </div>
       </footer>
-    </>
+    </div>
   );
 };
 

@@ -158,7 +158,9 @@ const Page = () => {
           </p>
         </SmallUnderLine>
         <SmallUnderLine isTitle whiteGray>
-          <Title>ПРИНЯТИЕ НАСЛЕДСТВА</Title>
+          <Title>
+            <div id='acceptance'>ПРИНЯТИЕ НАСЛЕДСТВА</div>
+          </Title>
         </SmallUnderLine>
         <Title isSubTitle>
           Принятие наследства: основные шаги и советы от юридического бюро
@@ -251,7 +253,9 @@ const Page = () => {
         </SmallUnderLine>
         <SmallUnderLine isTitle whiteGray>
           <Title>
-            КОМПЛЕКСНОЕ СОПРОВОЖДЕНИЕ наследственных дел от Юридического бюро
+            <div id='support'>
+              КОМПЛЕКСНОЕ СОПРОВОЖДЕНИЕ наследственных дел от Юридического бюро
+            </div>
             "Де-Юрекс"
           </Title>
         </SmallUnderLine>
@@ -338,7 +342,9 @@ const Page = () => {
           </p>
         </SmallUnderLine>
         <SmallUnderLine isTitle whiteGray>
-          <Title>НАСЛЕДСТВЕННЫЕ СПОРЫ</Title>
+          <Title>
+            <div id='disputes'>НАСЛЕДСТВЕННЫЕ СПОРЫ</div>
+          </Title>
         </SmallUnderLine>
         <Title isSubTitle>
           Защитите свои права с Юридическим бюро "Де-Юрекс"
