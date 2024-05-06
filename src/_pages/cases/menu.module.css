@@ -538,7 +538,7 @@
   }
 
   .casesCards {
-    gap: 5px  !important;;
+    gap: 5px !important;
   }
 }
 
@@ -553,6 +553,6 @@
 
 @media (max-width: 300px) {
   .casesCards {
-    gap: 10px  !important;;
+    gap: 10px !important;
   }
 }

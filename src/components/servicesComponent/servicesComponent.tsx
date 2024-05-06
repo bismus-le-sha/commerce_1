@@ -64,6 +64,7 @@ const ServicesComponent = (props: ServicesComponent) => {
                       style={{
                         cursor: "pointer",
                         color: isWhite ? "white" : "#000",
+                        margin: 0,
                       }}
                       onClick={handleOpenModal}
                     >
@@ -77,7 +78,11 @@ const ServicesComponent = (props: ServicesComponent) => {
                               style={{
                                 color: isWhite ? "white" : "#000",
                                 borderBottom:
-                                  pathname === href ? "1px solid #000" : "none",
+                                  pathname === href
+                                    ? isWhite
+                                      ? "1px solid #fff"
+                                      : "1px solid #000"
+                                    : "none",
                               }}
                               className={cls.menuItemText}
                             >
@@ -97,7 +102,11 @@ const ServicesComponent = (props: ServicesComponent) => {
           ) : (
             <li
               className={cls.menuItem}
-              style={{ cursor: "pointer", color: isWhite ? "white" : "#000" }}
+              style={{
+                cursor: "pointer",
+                color: isWhite ? "white" : "#000",
+                margin: 0,
+              }}
               onClick={handleOpenModal}
             >
               Услуги
@@ -110,7 +119,11 @@ const ServicesComponent = (props: ServicesComponent) => {
             <>
               <li
                 className={cls.menuItem}
-                style={{ cursor: "pointer", color: isWhite ? "white" : "#000" }}
+                style={{
+                  cursor: "pointer",
+                  color: isWhite ? "white" : "#000",
+                  margin: 0,
+                }}
                 onClick={handleOpen}
               >
                 Услуги
@@ -123,7 +136,11 @@ const ServicesComponent = (props: ServicesComponent) => {
                         style={{
                           color: isWhite ? "white" : "#000",
                           borderBottom:
-                            pathname === href ? "1px solid #000" : "none",
+                            pathname === href
+                              ? isWhite
+                                ? "1px solid #fff"
+                                : "1px solid #000"
+                              : "none",
                         }}
                         className={cls.menuItemText}
                       >
@@ -137,7 +154,11 @@ const ServicesComponent = (props: ServicesComponent) => {
           ) : (
             <li
               className={cls.menuItem}
-              style={{ cursor: "pointer", color: isWhite ? "white" : "#000" }}
+              style={{
+                cursor: "pointer",
+                color: isWhite ? "white" : "#000",
+                margin: 0,
+              }}
               onClick={handleOpen}
             >
               Услуги

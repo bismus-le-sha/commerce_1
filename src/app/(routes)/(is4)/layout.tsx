@@ -2,7 +2,7 @@ import Footer from "@/components/footer/footer";
 
 import React, { ReactNode } from "react";
 import { PagesMenu } from "@/_pages/cases/Menu";
-import ContactsWithUsWHite from "../(other)/cases/ContactsWithUs";
+import ContactsWithUsWHite from "../(is5)/cases/ContactsWithUs";
 
 const Layout = ({ children }: { children: ReactNode }) => {
   return (

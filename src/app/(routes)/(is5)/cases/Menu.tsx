@@ -1,11 +1,11 @@
 "use client";
 
-import { ReactNode, useEffect, useRef, useState } from "react";
-import "../../components/swiper/swiper.css";
-import cls from "./menu.module.css";
+import { ReactNode, useEffect, useState } from "react";
+import "../../../../components/swiper/swiper.css";
+import cls from "../../../../_pages/cases/menu.module.css";
 import classnames from "classnames";
 import Link from "next/link";
-import { items } from "../../components/menu/items";
+import { items } from "../../../../components/menu/items";
 import { usePathname } from "next/navigation";
 import ServicesComponent from "@/components/servicesComponent/servicesComponent";
 
@@ -97,7 +97,7 @@ export const PagesMenu = ({ children }: { children: ReactNode }) => {
             })}
           >
             <ul className={cls.menu}>
-              <ServicesComponent isMobile isWhite modalBackground='black' />
+              <ServicesComponent isMobile />
               {items.map(({ text, href }) => {
                 return (
                   <li className={cls.menuItem} key={text}>
@@ -146,7 +146,7 @@ export const PagesMenu = ({ children }: { children: ReactNode }) => {
                 ></span>
               </div>
               <ul className={cls.menu}>
-                <ServicesComponent isWhite />
+                <ServicesComponent />
                 {items.map(({ text, href }) => {
                   return (
                     <li className={cls.menuItem} key={text}>

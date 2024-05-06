@@ -18,6 +18,7 @@ import letter1 from "@/assets/Group 96.png";
 import letter2 from "@/assets/Group 95.png";
 import allLetter from "@/assets/Group 97.png";
 import Footer from "@/components/footer/footer";
+import ServicesComponent from "@/components/servicesComponent/servicesComponent";
 
 const Page = () => {
   const [isMedia, setIsMedia] = useState<boolean>(false);
@@ -90,6 +91,7 @@ const Page = () => {
             })}
           >
             <ul className={cls.menu}>
+              <ServicesComponent isMobile />
               {items.map(({ text, href }) => {
                 console.log(pathname === href);
                 return (
@@ -120,6 +122,7 @@ const Page = () => {
                 <span style={whiteBgStyle} className={cls.bigLine}></span>
               </div>
               <ul className={cls.menu}>
+                <ServicesComponent />
                 {items.map(({ text, href }) => {
                   return (
                     <li className={cls.menuItem} key={text}>

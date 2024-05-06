@@ -316,6 +316,12 @@
   width: 95vw;
   margin: 0 auto;
 }
+/* .menuItem:first-child {
+  margin-top: 0;
+}
+.menuItem:last-child {
+  margin-bottom: 0;
+} */
 
 @media (max-width: 1400px) {
   .contacts {
@@ -615,12 +621,6 @@
 
   .link {
     font-size: 6px;
-  }
-  .menuItem:first-child {
-    margin-top: 0;
-  }
-  .menuItem:last-child {
-    margin-bottom: 0;
   }
 
   .menuContainer {

@@ -2,10 +2,10 @@
 
 import ISFooter from "@/components/footer/footer";
 import Footer from "../(is)/otherServices/Footer";
-import { PagesMenu } from "@/_pages/cases/Menu";
+import { PagesMenu } from "./cases/Menu";
 import React, { ReactNode } from "react";
 import { usePathname } from "next/navigation";
-import ContactsWithUs from "./taxes/ContactsWithUs";
+import ContactsWithUs from "../(other)/taxes/ContactsWithUs";
 import ContactsWithUsWHite from "../(is5)/cases/ContactsWithUs";
 
 const Layout = ({ children }: { children: ReactNode }) => {
