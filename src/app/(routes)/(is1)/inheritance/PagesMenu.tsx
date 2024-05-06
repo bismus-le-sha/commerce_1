@@ -7,6 +7,7 @@ import classnames from "classnames";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { items } from "@/components/menu/items";
+import ServicesComponent from "@/components/servicesComponent/servicesComponent";
 
 export const PagesMenu = ({ children }: { children: ReactNode }) => {
   const [isMedia, setIsMedia] = useState<boolean>(false);
@@ -89,6 +90,7 @@ export const PagesMenu = ({ children }: { children: ReactNode }) => {
             })}
           >
             <ul className={cls.menu}>
+              <ServicesComponent isMobile isWhite modalBackground='black' />
               {items.map(({ text, href }) => {
                 return (
                   <li className={cls.menuItem} key={text}>
@@ -137,6 +139,7 @@ export const PagesMenu = ({ children }: { children: ReactNode }) => {
                 ></span>
               </div>
               <ul className={cls.menu}>
+                <ServicesComponent isWhite modalBackground='black' />
                 {items.map(({ text, href }) => {
                   return (
                     <li className={cls.menuItem} key={text}>

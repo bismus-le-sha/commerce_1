@@ -6,12 +6,13 @@ import cls from "./pagesMenu.module.css";
 import classnames from "classnames";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { items } from "@/components/menu/items";
+import { Services, items } from "@/components/menu/items";
+import ServicesComponent from "@/components/servicesComponent/servicesComponent";
 
 export const PagesMenu = ({ children }: { children: ReactNode }) => {
   const [isMedia, setIsMedia] = useState<boolean>(false);
   const pathname = usePathname();
-
+  const [isOpen, setIsOpen] = useState(false);
 
   const isDark =
     pathname === "/arbitration" ||
@@ -21,17 +22,21 @@ export const PagesMenu = ({ children }: { children: ReactNode }) => {
 
   const isWhite = pathname === "/otherServices" || pathname === "/cases";
 
-  useEffect(() => {
-    setIsMedia(document.body.clientWidth <= 700);
-  }, []);
-
   const whiteStyle = {
     color: "#fff",
+  };
+
+  const handleOpen = () => {
+    setIsOpen((prev) => !prev);
   };
 
   const whiteBgStyle = {
     backgroundColor: isDark ? "#fff" : "#000",
   };
+
+  useEffect(() => {
+    setIsMedia(document.body.clientWidth <= 700);
+  }, []);
 
   return (
     <>
@@ -90,6 +95,7 @@ export const PagesMenu = ({ children }: { children: ReactNode }) => {
             })}
           >
             <ul className={cls.menu}>
+              <ServicesComponent isMobile />
               {items.map(({ text, href }) => {
                 return (
                   <li className={cls.menuItem} key={text}>
@@ -138,6 +144,7 @@ export const PagesMenu = ({ children }: { children: ReactNode }) => {
                 ></span>
               </div>
               <ul className={cls.menu}>
+                <ServicesComponent />
                 {items.map(({ text, href }) => {
                   return (
                     <li className={cls.menuItem} key={text}>

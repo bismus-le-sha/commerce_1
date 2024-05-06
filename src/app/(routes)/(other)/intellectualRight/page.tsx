@@ -10,69 +10,23 @@ import SmallUnderLine from "@/components/smallUnderLine/SmallUnderLine";
 import FullUnderLine from "@/components/fullUnderLine/FullUnderLine";
 import OpenCard from "@/components/openCard/openCard";
 import ObserverList from "@/components/ObserverList/ObserverList";
-import { useInView } from "react-intersection-observer";
 import { useEffect, useRef } from "react";
-import { useRouter } from "next/navigation";
 
 const Page = () => {
   const allElRef = useRef<HTMLOListElement | null>(null);
-  const router = useRouter();
   let observer = useRef<IntersectionObserver | null>();
-  const {
-    ref: trademarksRef,
-    // inView: trademarksView,
-    entry: trademarksEntry,
-  } = useInView({
-    threshold: 0,
-  });
-  const {
-    ref: patentsRef,
-    // inView: patentsView,
-    entry: patentsEntry,
-  } = useInView({
-    threshold: 0,
-  });
-  const {
-    ref: copyrightRef,
-    // inView: copyrightView,
-    entry: copyrightEntry,
-  } = useInView({
-    threshold: 0,
-  });
-  const {
-    ref: commercialDesignationsRef,
-    // inView: commercialDesignationsView,
-    entry: commercialDesignationsEntry,
-  } = useInView({
-    threshold: 0,
-  });
-  const {
-    ref: brandProtectionRef,
-    // inView: brandProtectionRefView,
-    entry: brandProtectionEntry,
-  } = useInView({
-    threshold: 0,
-  });
+  const sectionRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     observer.current = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
+          const idElement = entry.target.querySelector(".refElement");
           allElRef.current?.querySelectorAll("li").forEach((item) => {
-            const idElement = entry.target.querySelector(".refElement");
-            if (
-              item.textContent?.toUpperCase() ===
-              idElement?.textContent?.toUpperCase()
-            ) {
+            if (item.id.toUpperCase() === idElement?.id.toUpperCase()) {
               item.classList.remove("unActive");
               item.classList.add("active");
-              router.push(`/intellectualRight/#${idElement?.id}`);
-            }
-
-            if (
-              item.textContent?.toUpperCase() !==
-              idElement?.textContent?.toUpperCase()
-            ) {
+            } else {
               item.classList.remove("active");
               item.classList.remove("unActive");
             }
@@ -82,25 +36,17 @@ const Page = () => {
     });
   }, []);
 
-  if (
-    patentsEntry?.target &&
-    copyrightEntry?.target &&
-    commercialDesignationsEntry?.target &&
-    brandProtectionEntry?.target &&
-    trademarksEntry?.target
-  ) {
-    if (observer.current) {
-      observer.current.observe(trademarksEntry.target);
-      observer.current.observe(patentsEntry.target);
-      observer.current.observe(copyrightEntry.target);
-      observer.current.observe(commercialDesignationsEntry.target);
-      observer.current.observe(brandProtectionEntry.target);
+  useEffect(() => {
+    if (sectionRef.current) {
+      sectionRef.current.querySelectorAll("section").forEach((item) => {
+        observer.current?.observe(item);
+      });
     }
-  }
+  }, []);
 
   return (
     <>
-      <div className={cls.contentContainer}>
+      <div ref={sectionRef} className={cls.contentContainer}>
         <Title>ИНТЕЛЛЕКТУАЛЬНОЕ ПРАВО</Title>
         <p>
           Интеллектуальное право охватывает такие виды объектов, как авторское
@@ -154,7 +100,7 @@ const Page = () => {
             интеллектуального права.
           </p>
         </SmallUnderLine>
-        <section ref={trademarksRef}>
+        <section>
           <FullUnderLine whiteGray isTitle>
             <Title>
               <div className='refElement' id='trademarks'>
@@ -240,7 +186,7 @@ const Page = () => {
           </SmallUnderLine>
         </section>
 
-        <section ref={patentsRef}>
+        <section>
           <FullUnderLine whiteGray isTitle>
             <Title>
               <div className='refElement' id='patents'>
@@ -353,7 +299,7 @@ const Page = () => {
             />
           </SmallUnderLine>
         </section>
-        <section ref={copyrightRef}>
+        <section>
           <FullUnderLine whiteGray isTitle>
             <Title isSubTitle>
               <div className='refElement' id='copyright'>
@@ -421,7 +367,7 @@ const Page = () => {
             </p>
           </SmallUnderLine>
         </section>
-        <section ref={commercialDesignationsRef}>
+        <section>
           <FullUnderLine whiteGray isTitle>
             <Title>
               <div className='refElement' id='commercial-designations'>
@@ -509,7 +455,7 @@ const Page = () => {
             </p>
           </SmallUnderLine>
         </section>
-        <section ref={brandProtectionRef}>
+        <section>
           <FullUnderLine whiteGray isTitle>
             <Title>
               <div className='refElement' id='brand-protection'>
@@ -599,6 +545,7 @@ const Page = () => {
                 borderColor='#404040'
               >
                 <ObserverList
+                  isWHite
                   allRef={allElRef}
                   items={[
                     {

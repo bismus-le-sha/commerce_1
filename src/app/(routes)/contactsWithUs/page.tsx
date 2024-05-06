@@ -118,28 +118,36 @@ const ContactsWithUsPage = () => {
         </main>
         <div className={cls.maps}>
           <div className={cls.mapImgContainer}>
-            <Image src={map} alt='map' />
+            <div>
+              <Image src={map} alt='map' />
+            </div>
             <MapCard
               cityText='Офис 1: г. Санкт - Петербург'
               addressText='Саперный переулок дом 6, пом. 38-Н, 191014'
             />
           </div>
           <div className={cls.mapImgContainer}>
-            <Image src={map} alt='map' />
+            <div>
+              <Image src={map} alt='map' />
+            </div>
             <MapCard
               cityText='Офис 2: г. Санкт - Петербург'
               addressText='Невский пр., 104, Санкт-Петербург, 191025'
             />
           </div>
           <div className={cls.mapImgContainer}>
-            <Image src={map} alt='map' />
+            <div>
+              <Image src={map} alt='map' />
+            </div>
             <MapCard
               cityText='Офис 3: г. Санкт - Петербург'
               addressText='15 Линия В.О., д 38/59, литер В, помещение 5-Н, 199178'
             />
-          </div>{" "}
+          </div>
           <div className={cls.mapImgContainer}>
-            <Image src={map} alt='map' />
+            <div>
+              <Image src={map} alt='map' />
+            </div>
             <MapCard
               cityText='Офис 4: г. Москва Тверская'
               addressText='дом 27, строение 2, этаж 2, 199178'

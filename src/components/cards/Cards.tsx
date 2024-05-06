@@ -13,7 +13,7 @@ const Cards = () => {
   const isIntellectualRight = pathname === "/intellectualRight";
 
   return (
-    <div className={cls.casesCards}>
+    <div  className={cls.casesCards}>
       <CaseCard
         className={
           (isArbitration || isTaxes || isRealEstate) && !isIntellectualRight

@@ -1,5 +1,6 @@
 .selectedRedText {
   color: red;
+  text-decoration: none;
 }
 
 .selectedTriangleText {

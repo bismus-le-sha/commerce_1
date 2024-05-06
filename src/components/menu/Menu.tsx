@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { items } from "./items";
+import { Services, items } from "./items";
 import cls from "./Menu.module.css";
 import classnames from "classnames";
 import burgerMenu from "../../assets/burgerMenu.svg";
@@ -19,6 +19,7 @@ const Menu = (props: MenuProps) => {
   const [isVisible, setIsVisible] = useState(false);
   const [isMedia, setIsMedia] = useState<boolean>(false);
   const pathname = usePathname();
+  const [isOpen, setIsOpen] = useState(false);
 
   const mods = {
     [cls.visible]: isVisible,
@@ -30,6 +31,10 @@ const Menu = (props: MenuProps) => {
 
   const whiteStyle = {
     color: isWhite ? "#fff" : "",
+  };
+
+  const handleOpen = () => {
+    setIsOpen((prev) => !prev);
   };
 
   const whiteBackgroundStyle = {
@@ -49,11 +54,38 @@ const Menu = (props: MenuProps) => {
       <div className={classnames(cls.menuContainer, mods)}>
         <span style={whiteBackgroundStyle} className={cls.smallLine}></span>
         <span style={whiteBackgroundStyle} className={cls.bigLine}></span>
-        <ul className={cls.menu}>
-          {items.map(({ text, href }) => {
-            console.log(pathname, "pathname");
-            console.log(href, "href");
 
+        <ul className={cls.menu}>
+          {isOpen ? (
+            <>
+              <li style={{ cursor: "pointer" }} onClick={handleOpen}>
+                Услуги
+              </li>
+              {Services.map(({ href, text }) => {
+                return (
+                  <li className={cls.menuItem} key={text}>
+                    <Link href={href}>
+                      <span
+                        style={{
+                          ...whiteStyle,
+                          borderBottom:
+                            pathname === href ? "1px solid #000" : "none",
+                        }}
+                        className={cls.menuItemText}
+                      >
+                        {text}
+                      </span>
+                    </Link>
+                  </li>
+                );
+              })}
+            </>
+          ) : (
+            <li style={{ cursor: "pointer" }} onClick={handleOpen}>
+              Услуги
+            </li>
+          )}
+          {items.map(({ text, href }) => {
             return (
               <li className={cls.menuItem} key={text}>
                 <Link href={href}>

@@ -40,10 +40,6 @@ const Home = () => {
     threshold: 0,
   });
 
-
-  
-  console.log(entry);
-
   useEffect(() => {
     setIsMobile(document.body.clientWidth >= 1000);
   }, []);

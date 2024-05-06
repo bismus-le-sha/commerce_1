@@ -7,10 +7,11 @@ interface ObserverListProps {
   type?: CSSProperties["listStyle"];
   margin?: CSSProperties["margin"];
   allRef: MutableRefObject<HTMLOListElement | null>;
+  isWHite?: boolean;
 }
 
 const ObserverList = (props: ObserverListProps) => {
-  const { items, type = "disc", margin, allRef } = props;
+  const { items, type = "disc", margin, allRef, isWHite = false } = props;
 
   return (
     <>
@@ -19,8 +20,13 @@ const ObserverList = (props: ObserverListProps) => {
           {items.map((props) => {
             const { text, linkRef } = props;
             return (
-              <li style={{ listStyle: type, margin }}>
-                <Link href={`#${linkRef}`}>{text}</Link>
+              <li id={linkRef} style={{ listStyle: type, margin }}>
+                <Link
+                  style={{ color: isWHite ? "#fff" : "#000" }}
+                  href={`#${linkRef}`}
+                >
+                  {text}
+                </Link>
               </li>
             );
           })}

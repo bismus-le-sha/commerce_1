@@ -7,12 +7,11 @@ import classnames from "classnames";
 import Link from "next/link";
 import { items } from "../../components/menu/items";
 import { usePathname } from "next/navigation";
+import ServicesComponent from "@/components/servicesComponent/servicesComponent";
 
 export const PagesMenu = ({ children }: { children: ReactNode }) => {
   const [isMedia, setIsMedia] = useState<boolean>(false);
   const pathname = usePathname();
-
-  const isHeaderDark = pathname === "/otherServices";
 
   const isDark =
     pathname === "/arbitration" ||
@@ -98,6 +97,7 @@ export const PagesMenu = ({ children }: { children: ReactNode }) => {
             })}
           >
             <ul className={cls.menu}>
+              <ServicesComponent isMobile />
               {items.map(({ text, href }) => {
                 return (
                   <li className={cls.menuItem} key={text}>
@@ -146,6 +146,7 @@ export const PagesMenu = ({ children }: { children: ReactNode }) => {
                 ></span>
               </div>
               <ul className={cls.menu}>
+                <ServicesComponent isWhite />
                 {items.map(({ text, href }) => {
                   return (
                     <li className={cls.menuItem} key={text}>
