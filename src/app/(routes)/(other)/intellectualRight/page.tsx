@@ -19,35 +19,35 @@ const Page = () => {
   const router = useRouter();
   const {
     ref: trademarksRef,
-    inView: trademarksView,
+    // inView: trademarksView,
     entry: trademarksEntry,
   } = useInView({
     threshold: 0,
   });
   const {
     ref: patentsRef,
-    inView: patentsView,
+    // inView: patentsView,
     entry: patentsEntry,
   } = useInView({
     threshold: 0,
   });
   const {
     ref: copyrightRef,
-    inView: copyrightView,
+    // inView: copyrightView,
     entry: copyrightEntry,
   } = useInView({
     threshold: 0,
   });
   const {
     ref: commercialDesignationsRef,
-    inView: commercialDesignationsView,
+    // inView: commercialDesignationsView,
     entry: commercialDesignationsEntry,
   } = useInView({
     threshold: 0,
   });
   const {
     ref: brandProtectionRef,
-    inView: brandProtectionRefView,
+    // inView: brandProtectionRefView,
     entry: brandProtectionEntry,
   } = useInView({
     threshold: 0,

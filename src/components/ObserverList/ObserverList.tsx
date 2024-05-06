@@ -6,7 +6,7 @@ interface ObserverListProps {
   items: Array<{ text: string; linkRef: string }>;
   type?: CSSProperties["listStyle"];
   margin?: CSSProperties["margin"];
-  allRef: MutableRefObject<Element | null>;
+  allRef: MutableRefObject<HTMLOListElement | null>;
 }
 
 const ObserverList = (props: ObserverListProps) => {
