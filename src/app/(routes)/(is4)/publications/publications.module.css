@@ -1,0 +1,27 @@
+.contentContainer {
+  text-align: justify;
+  flex-grow: 1;
+}
+
+.publicationsContainer {
+  text-align: left;
+  padding: 10px;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+}
+
+.mainImageContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.mainImageItem {
+  flex: 1;
+  max-width: 410px;
+  max-height: 620px;
+}

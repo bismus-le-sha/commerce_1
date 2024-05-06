@@ -2,7 +2,7 @@
 
 import Cards from "./Cards";
 
-import { ReactNode, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "../../../components/swiper/swiper.css";
 import cls from "./card.module.css";
 import classnames from "classnames";

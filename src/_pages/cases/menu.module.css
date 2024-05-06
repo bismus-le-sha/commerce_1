@@ -4,6 +4,8 @@
   justify-content: space-between;
   max-width: 300px;
   max-height: 500px;
+  position: sticky;
+  top: 40px;
 }
 
 .img {
@@ -211,7 +213,7 @@
 .container {
   max-width: 1700px;
   margin: 0 auto;
-  padding: 30px 15px;
+  padding: 0 15px;
 }
 .phoneLink {
   color: #000;
@@ -259,7 +261,6 @@
 }
 
 .casesCards {
-  /* height: 100vh; */
   display: flex;
   flex-direction: column;
 }
@@ -489,11 +490,11 @@
     flex-direction: column;
   }
   .casesCards {
-    flex-direction: row;
-    flex-wrap: wrap;
-    height: initial;
-    gap: 20px;
-    justify-content: center;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    height: initial !important;
+    gap: 20px !important;
+    justify-content: center !important;
   }
 }
 
@@ -537,7 +538,7 @@
   }
 
   .casesCards {
-    gap: 5px;
+    gap: 5px  !important;;
   }
 }
 
@@ -552,6 +553,6 @@
 
 @media (max-width: 300px) {
   .casesCards {
-    gap: 10px;
+    gap: 10px  !important;;
   }
 }

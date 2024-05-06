@@ -8,7 +8,6 @@ import main4 from "../../../assets/bg-4.png";
 import { SwiperComponent } from "../../../components/swiper/Swiper";
 
 import cls from "../../../_pages/home/home.module.css";
-import { items } from "../../../components/menu/items";
 import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import Menu from "@/components/menu/Menu";

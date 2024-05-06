@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 
 const Cards = () => {
   const pathname = usePathname();
-  const isArbitration = pathname === "/arbitration";
+  const isArbitration = pathname === "/arbitration" || "/taxes";
 
   return (
     <div className={cls.casesCards}>

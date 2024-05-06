@@ -4,7 +4,6 @@ import classnames from "classnames";
 import cls from "./footer.module.css";
 import { items } from "../menu/items";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
 
 interface FooterProps {
   isWhite?: boolean;
@@ -14,26 +13,18 @@ interface FooterProps {
 const Footer = (props: FooterProps) => {
   const { isWhite, isDark } = props;
   const pathname = usePathname();
-  const isDarkFooter = pathname === "/arbitration";
-  const [isWhiteFooter, setIsWhiteFooter] = useState(false);
-
-  useEffect(() => {
-    setIsWhiteFooter(pathname === "/cases");
-  }, []);
+  const isDarkFooter = pathname === "/arbitration" || pathname === "/taxes";
+  const isWhiteFooter = pathname === "/cases";
 
   const whiteStyle = {
     color: (isDarkFooter || isWhite) && !isWhiteFooter ? "#fff" : "#000",
-  };
-
-  const whiteBgStyle = {
-    backgroundColor: isDarkFooter ? "#fff" : "",
   };
 
   return (
     <>
       <div
         style={{
-          backgroundColor: isDark || isDarkFooter ? "#222222" : "",
+          backgroundColor: isDark || isDarkFooter ? "#222222" : "#fff",
           maxWidth: 1700,
           margin: "0 auto",
           padding: "0 20px",

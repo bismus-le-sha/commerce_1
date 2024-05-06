@@ -1,0 +1,47 @@
+.otherServices {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px;
+  margin-bottom: 10px;
+}
+
+.otherServicesCard {
+  flex: 1;
+  position: relative;
+}
+
+.contentContainer p {
+  font-family: Playfair Display;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0.08em;
+  text-align: left;
+}
+
+.rightSide p {
+  font-family: Playfair Display;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0.08em;
+  text-align: left;
+}
+
+.otherServicesCard:first-child::after {
+  content: "";
+  width: 272px;
+  height: 1px;
+  background-color: #000;
+  position: absolute;
+  bottom: 0px;
+}
+
+.family {
+  padding-bottom: 20px;
+}
+
+.family::after {
+  /* content:'' :; */
+}

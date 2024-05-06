@@ -1,18 +1,29 @@
 "use client";
 
-import { ReactNode, useEffect, useState } from "react";
+import { ReactNode, useEffect, useRef, useState } from "react";
 import "../../components/swiper/swiper.css";
 import cls from "./menu.module.css";
 import classnames from "classnames";
 import Link from "next/link";
 import { items } from "../../components/menu/items";
 import { usePathname } from "next/navigation";
-import BeforeFooterBlock from "@/components/beforeFooterBlock/BeforeFooterBlock";
 
 export const PagesMenu = ({ children }: { children: ReactNode }) => {
   const [isMedia, setIsMedia] = useState<boolean>(false);
   const pathname = usePathname();
-  const isDark = pathname === "/arbitration";
+
+  const isHeaderDark = pathname === "/otherServices";
+
+  const isDark =
+    pathname === "/arbitration" ||
+    pathname === "/taxes" ||
+    pathname === "/realEstate" ||
+    pathname === "/intellectualRight";
+
+  const isWhite =
+    pathname === "/otherServices" ||
+    pathname === "/cases" ||
+    pathname === "/publications";
 
   useEffect(() => {
     setIsMedia(document.body.clientWidth <= 700);
@@ -23,19 +34,26 @@ export const PagesMenu = ({ children }: { children: ReactNode }) => {
   };
 
   const whiteBgStyle = {
-    backgroundColor: isDark ? "#fff" : "",
+    backgroundColor: isDark ? "#fff" : "#000",
   };
 
   return (
     <>
       <div
         style={{
-          backgroundColor: isDark ? "#282828" : "",
+          backgroundColor: isDark || !isWhite ? "#282828" : "#fff",
         }}
         className={cls.container}
       >
         <header className={cls.header}>
-          <div className={cls.contacts}>
+          <div
+            style={{
+              backgroundColor: isWhite || !isDark ? "#fff" : "#282828",
+              minHeight: 204,
+              padding: "0 30px",
+            }}
+            className={cls.contacts}
+          >
             <div>
               <Link style={{ maxHeight: "80px" }} href={"/"}>
                 <div
@@ -81,7 +99,6 @@ export const PagesMenu = ({ children }: { children: ReactNode }) => {
           >
             <ul className={cls.menu}>
               {items.map(({ text, href }) => {
-                console.log(pathname === href);
                 return (
                   <li className={cls.menuItem} key={text}>
                     <Link href={href}>
@@ -90,6 +107,7 @@ export const PagesMenu = ({ children }: { children: ReactNode }) => {
                           borderBottom:
                             pathname === href ? "1px solid #000" : "none",
                           ...whiteStyle,
+                          color: isWhite ? "#000" : "#fff",
                         }}
                         className={cls.menuItemText}
                       >
@@ -102,12 +120,30 @@ export const PagesMenu = ({ children }: { children: ReactNode }) => {
             </ul>
           </div>
         )}
-        <div className={cls.containerImage}>
+        <div
+          style={{
+            backgroundColor: isWhite ? "white" : "#282828",
+            color: isWhite ? "#000" : "#fff",
+          }}
+          className={cls.containerImage}
+        >
           {!isMedia && (
             <div className={classnames(cls.menuContainer)}>
               <div>
-                <span style={whiteBgStyle} className={cls.smallLine}></span>
-                <span style={whiteBgStyle} className={cls.bigLine}></span>
+                <span
+                  style={{
+                    ...whiteBgStyle,
+                    backgroundColor: isWhite ? "#000" : "#fff",
+                  }}
+                  className={cls.smallLine}
+                ></span>
+                <span
+                  style={{
+                    ...whiteBgStyle,
+                    backgroundColor: isWhite ? "#000" : "#fff",
+                  }}
+                  className={cls.bigLine}
+                ></span>
               </div>
               <ul className={cls.menu}>
                 {items.map(({ text, href }) => {
@@ -119,6 +155,7 @@ export const PagesMenu = ({ children }: { children: ReactNode }) => {
                             borderBottom:
                               pathname === href ? "1px solid #000" : "none",
                             ...whiteStyle,
+                            color: isWhite ? "#000" : "#fff",
                           }}
                           className={cls.menuItemText}
                         >
@@ -130,9 +167,18 @@ export const PagesMenu = ({ children }: { children: ReactNode }) => {
                 })}
               </ul>
               <div>
-                <span style={whiteBgStyle} className={cls.bigLine}></span>
                 <span
-                  style={whiteBgStyle}
+                  style={{
+                    ...whiteBgStyle,
+                    backgroundColor: isWhite ? "#000" : "#fff",
+                  }}
+                  className={cls.bigLine}
+                ></span>
+                <span
+                  style={{
+                    ...whiteBgStyle,
+                    backgroundColor: isWhite ? "#000" : "#fff",
+                  }}
                   className={[cls.smallLine, cls.marginBothrefmSmallLine].join(
                     " "
                   )}
@@ -142,7 +188,6 @@ export const PagesMenu = ({ children }: { children: ReactNode }) => {
           )}
           {children}
         </div>
-
       </div>
     </>
   );

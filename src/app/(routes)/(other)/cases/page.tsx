@@ -5,7 +5,6 @@ import clsText from "../../../../_pages/cases/text.module.css";
 import classnames from "classnames";
 import MainCase from "../../../../components/mainCase/MainCase";
 import Cards from "@/components/cards/Cards";
-import ContactsWithUs from "./ContactsWithUs";
 
 const CasesPage = () => {
   return (
@@ -218,9 +217,12 @@ const CasesPage = () => {
           }
           mainText={""}
         />
-        <ContactsWithUs />
       </div>
-      <Cards />
+      <div>
+        <div style={{ position: "sticky", top: "100px" }}>
+          <Cards />
+        </div>
+      </div>
     </>
   );
 };

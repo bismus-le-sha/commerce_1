@@ -10,6 +10,9 @@
   background-repeat: no-repeat;
   background-size: cover;
   margin-bottom: 5px;
+  max-width: 1700px;
+  max-height: 400px;
+  margin: 0 auto;
 }
 
 .many {

@@ -1,0 +1,10 @@
+.triggerBtn {
+  border: none;
+  background-color: transparent;
+}
+
+.triggerBtnContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

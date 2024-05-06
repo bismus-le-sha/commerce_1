@@ -78,18 +78,19 @@
 }
 
 .name {
-  font-size: 14px;
+  font-size: 14px !important;
   font-weight: 400;
 }
 
 .position {
-  font-size: 10px;
+  font-size: 10px !important;
+  line-height: normal !important;
 }
 
 .emailLink,
 .telLink {
   color: #fff;
-  font-size: 10px;
+  font-size: 10px !important;
 }
 
 @media (max-width: 1200px) {
@@ -121,11 +122,11 @@
   }
 
   .img p {
-    font-size: 12px;
+    font-size: 12px !important;
   }
 
   .img h3 {
-    font-size: 15px;
+    font-size: 15px !important;
   }
 
   .otherCases {
@@ -151,25 +152,25 @@
   }
 
   .name {
-    font-size: 10px;
+    font-size: 10px !important;
   }
 
   .position {
-    font-size: 7px;
+    font-size: 7px !important;
   }
   .link {
-    font-size: 8px;
+    font-size: 8px !important;
   }
 }
 
 @media (max-width: 700px) {
   .caseCard {
-    max-width: 120px;
+    max-width: 180px;
     max-height: 270px;
   }
 
   .caseImgContainer {
-    max-width: 100px;
+    max-width: 150px;
     max-height: 180px;
   }
 
@@ -178,29 +179,29 @@
   }
 
   .img p {
-    font-size: 8px;
+    font-size: 8px !important;
   }
   .img h3 {
-    font-size: 12px;
+    font-size: 12px !important;
   }
 
   .otherCases {
-    max-width: 100px;
+    max-width: 150px;
     max-height: 180px;
   }
 
   .link {
-    font-size: 6px;
+    font-size: 6px !important;
   }
 }
 
 @media (max-width: 600px) {
   .img p {
-    font-size: 6px;
+    font-size: 6px !important;
   }
 
   .img h3 {
-    font-size: 10px;
+    font-size: 10px !important;
   }
   .caseImgContainer {
     max-width: 120px;

@@ -1,0 +1,22 @@
+.smallUnderLine {
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.smallUnderLine:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+}
+
+.whiteGray:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #727171;
+}
