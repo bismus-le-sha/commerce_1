@@ -2,12 +2,15 @@ import Cards from "@/components/cards/Cards";
 import cls from "./arbitration.module.css";
 import SelectedText from "@/components/selectedText/SelectedText";
 import Link from "next/link";
+import Title from "@/components/Title/Title";
+import OpenCard from "@/components/openCard/openCard";
+import FullUnderLine from "@/components/fullUnderLine/FullUnderLine";
 
 const Page = () => {
   return (
     <>
       <div className={cls.contentContainer}>
-        <h1 className={cls.mainTitle}>АРБИТРАЖНЫЕ СПОРЫ</h1>
+        <Title>АРБИТРАЖНЫЕ СПОРЫ</Title>
         <div className={cls.textBlock}>
           <p>
             Арбитражные споры являются одной из ключевых сфер деятельности
@@ -28,7 +31,9 @@ const Page = () => {
           </p>
         </div>
 
-        <h2>Ключевые стратегии для победы в арбитражном суде:</h2>
+        <Title isSubTitle>
+          Ключевые стратегии для победы в арбитражном суде:
+        </Title>
         <div className={cls.mainStrategyBlock}>
           <ol>
             <SelectedText
@@ -152,7 +157,13 @@ const Page = () => {
                   реконструкцией, а сводится к капитальному ремонту,
                 </p>
                 <div className={cls.linkContainer}>
-                  <Link href={"#"}>Дело А56-69589/2019</Link>
+                  <Link
+                    href={
+                      "https://kad.arbitr.ru/Document/Pdf/eb91a406-39ea-464f-ab98-4804923b4eed/de61dd74-e0d5-4f31-8721-59e30cc19c2f/A56-69589-2019_20191214_Reshenie.pdf?isAddStamp=True"
+                    }
+                  >
+                    Дело А56-69589/2019
+                  </Link>
                 </div>
               </div>
             </SelectedText>
@@ -168,7 +179,13 @@ const Page = () => {
                   товарного знака.
                 </p>
                 <div className={cls.linkContainer}>
-                  <Link href={"#"}> Дело № А56-23647/2013</Link>
+                  <Link
+                    href={
+                      "https://kad.arbitr.ru/Document/Pdf/53bf8dc0-1e93-48e6-98c9-801c984b1715/6e499b6b-65ce-4f14-b6f4-f80ffaab457e/A56-83433-2021_20230321_Reshenie.pdf?isAddStamp=True"
+                    }
+                  >
+                    Дело № А56-23647/2013
+                  </Link>
                 </div>
               </div>
             </SelectedText>
@@ -181,7 +198,13 @@ const Page = () => {
                   подписанные Акты выполненных работ,
                 </p>
                 <div className={cls.linkContainer}>
-                  <Link href={"#"}>Дело No А56-83433/2021</Link>
+                  <Link
+                    href={
+                      "https://kad.arbitr.ru/Document/Pdf/616bdc32-ae9f-4137-83af-cf9918e291c2/4d1f5c8e-3cbd-42c3-8c2a-7915f40520f3/A56-23647-2013_20131024_Reshenie.pdf?isAddStamp=True"
+                    }
+                  >
+                    Дело No А56-83433/2021
+                  </Link>
                 </div>
               </div>
             </SelectedText>
@@ -192,13 +215,19 @@ const Page = () => {
                   на поршень внутреннего сгорания.
                 </p>
                 <div className={cls.linkContainer}>
-                  <Link href={"#"}>Дело № СИП-801/2020</Link>
+                  <Link
+                    href={
+                      "https://kad.arbitr.ru/Document/Pdf/616bdc32-ae9f-4137-83af-cf9918e291c2/4d1f5c8e-3cbd-42c3-8c2a-7915f40520f3/A56-23647-2013_20131024_Reshenie.pdf?isAddStamp=True"
+                    }
+                  >
+                    Дело № СИП-801/2020
+                  </Link>
                 </div>
               </div>
             </SelectedText>
           </div>
         </div>
-        <h2>Преимущества арбитражных споров:</h2>
+        <Title isSubTitle>Преимущества арбитражных споров:</Title>
         <div className={cls.advantagesBlockContainer}>
           <ol className={cls.advantagesBlock}>
             <li>
@@ -238,128 +267,145 @@ const Page = () => {
             </li>
           </ol>
         </div>
-        <h2>Мы помогаем, включая, но не ограничиваясь следующим:</h2>
-        <div className={cls.helpsOtherBlockContainer}>
-          <ul className={cls.helpsOther}>
-            <li>
-              <p>споры, вытекающие из корпоративных отношений;</p>
-            </li>
-            <li>
-              <p>судебное взыскание долгов;</p>
-            </li>
-            <li>
-              <p>процедуры банкротства;</p>
-            </li>
-            <li>
-              <p>споры по недвижимости и строительству;</p>
-            </li>
-            <li>
-              <p>коммерческие споры;</p>
-            </li>
-            <li>
-              <p>
-                судебная защита имущественных прав авторов и правообладателей
-                патентов, товарных знаков, программ ЭВМ и доменных имен;
-              </p>
-            </li>
-            <li>
-              <p>споры о защите деловой репутации;</p>
-            </li>
-            <li>
-              <p>сналоговые, антимонопольные и таможенные споры;</p>
-            </li>
-            <li>
-              <p>споры с государственными органами;</p>
-            </li>
-            <li>
-              <p>
-                обжалование решений третейских судов и приведение их в
-                исполнение;
-              </p>
-            </li>
-            <li>
-              <p>организация судебных процессов за рубежом и участие в них;</p>
-            </li>
-            <li>
-              <p>исполнительное производство;</p>
-            </li>
-            <li>
-              <p>анализ рисков возникновения судебных споров;</p>
-            </li>
-            <li>
-              <p>разработка стратегии ведения дела;</p>
-            </li>
-            <li>
-              <p>
-                разработка правовой позиции в судебном споре, подготовка
-                заключения по правовой позиции;
-              </p>
-            </li>
-            <li>
-              <p>
-                сбор необходимых доказательств, подготовка исковых заявлений,
-                жалоб, ходатайств и других процессуальных документов;
-              </p>
-            </li>
-            <li>
-              <p>подготовка и заключение мировых соглашений;</p>
-            </li>
-          </ul>
-        </div>
-        <h2>Другие услуги</h2>
-        <div className={cls.otherServicesContainer}>
-          <div className={cls.otherServices}>
-            <div className={cls.otherServicesCard}>
-              <h3>Для граждан:</h3>
-              <ul>
+        <FullUnderLine whiteGray>
+          <OpenCard
+            trigger={
+              <Title isSubTitle>
+                Мы помогаем, включая, но не ограничиваясь следующим:
+              </Title>
+            }
+          >
+            <div className={cls.helpsOtherBlockContainer}>
+              <ul className={cls.helpsOther}>
                 <li>
-                  <p>Семейные споры</p>
+                  <p>споры, вытекающие из корпоративных отношений;</p>
                 </li>
                 <li>
-                  <p>Трудовые споры</p>
+                  <p>судебное взыскание долгов;</p>
                 </li>
                 <li>
-                  <p>Земельные споры</p>
+                  <p>процедуры банкротства;</p>
                 </li>
                 <li>
-                  <p>Административные нарушения, штрафы</p>
+                  <p>споры по недвижимости и строительству;</p>
                 </li>
                 <li>
-                  <p>Жилищные споры</p>
+                  <p>коммерческие споры;</p>
                 </li>
                 <li>
-                  <p>Защита прав потребителей</p>
+                  <p>
+                    судебная защита имущественных прав авторов и
+                    правообладателей патентов, товарных знаков, программ ЭВМ и
+                    доменных имен;
+                  </p>
+                </li>
+                <li>
+                  <p>споры о защите деловой репутации;</p>
+                </li>
+                <li>
+                  <p>сналоговые, антимонопольные и таможенные споры;</p>
+                </li>
+                <li>
+                  <p>споры с государственными органами;</p>
+                </li>
+                <li>
+                  <p>
+                    обжалование решений третейских судов и приведение их в
+                    исполнение;
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    организация судебных процессов за рубежом и участие в них;
+                  </p>
+                </li>
+                <li>
+                  <p>исполнительное производство;</p>
+                </li>
+                <li>
+                  <p>анализ рисков возникновения судебных споров;</p>
+                </li>
+                <li>
+                  <p>разработка стратегии ведения дела;</p>
+                </li>
+                <li>
+                  <p>
+                    разработка правовой позиции в судебном споре, подготовка
+                    заключения по правовой позиции;
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    сбор необходимых доказательств, подготовка исковых
+                    заявлений, жалоб, ходатайств и других процессуальных
+                    документов;
+                  </p>
+                </li>
+                <li>
+                  <p>подготовка и заключение мировых соглашений;</p>
                 </li>
               </ul>
             </div>
-            <div className={cls.otherServicesCard}>
-              <h3>Для Бизнеса:</h3>
-              <ul>
-                <li>
-                  <p>Международный арбитраж</p>
-                </li>
-                <li>
-                  <p>Корпоративные споры</p>
-                </li>
-                <li>
-                  <p>Подрядные споры</p>
-                </li>
-                <li>
-                  <p>Налоговые споры</p>
-                </li>
-                <li>
-                  <p>Уголовная защита бизнеса</p>
-                </li>
-                <li>
-                  <p>Таможенное право</p>
-                </li>
-                <li>
-                  <p>Бухгалтерские услуги и Аудит</p>
-                </li>
-              </ul>
+          </OpenCard>
+        </FullUnderLine>
+        <FullUnderLine whiteGray>
+          <OpenCard trigger={<Title isSubTitle>Другие услуги</Title>}>
+            <div className={cls.otherServicesContainer}>
+              <div className={cls.otherServices}>
+                <div className={cls.otherServicesCard}>
+                  <h3>Для граждан:</h3>
+
+                  <ul>
+                    <li>
+                      <p>Семейные споры</p>
+                    </li>
+                    <li>
+                      <p>Трудовые споры</p>
+                    </li>
+                    <li>
+                      <p>Земельные споры</p>
+                    </li>
+                    <li>
+                      <p>Административные нарушения, штрафы</p>
+                    </li>
+                    <li>
+                      <p>Жилищные споры</p>
+                    </li>
+                    <li>
+                      <p>Защита прав потребителей</p>
+                    </li>
+                  </ul>
+                </div>
+                <div className={cls.otherServicesCard}>
+                  <h3>Для Бизнеса:</h3>
+                  <ul>
+                    <li>
+                      <p>Международный арбитраж</p>
+                    </li>
+                    <li>
+                      <p>Корпоративные споры</p>
+                    </li>
+                    <li>
+                      <p>Подрядные споры</p>
+                    </li>
+                    <li>
+                      <p>Налоговые споры</p>
+                    </li>
+                    <li>
+                      <p>Уголовная защита бизнеса</p>
+                    </li>
+                    <li>
+                      <p>Таможенное право</p>
+                    </li>
+                    <li>
+                      <p>Бухгалтерские услуги и Аудит</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
+          </OpenCard>
+        </FullUnderLine>
       </div>
       <div>
         <div style={{ position: "sticky", top: "100px" }}>
