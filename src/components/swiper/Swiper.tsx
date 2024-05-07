@@ -47,7 +47,7 @@ export const SwiperComponent = ({ items }: { items: Item[] }) => {
         modules={[Autoplay, Pagination, Navigation]}
         centeredSlides={true}
         flipEffect={{ slideShadows: true }}
-        // autoplay={{ delay: 1500, disableOnInteraction: false }}
+        autoplay={{ delay: 1500, disableOnInteraction: false }}
         className='mySwiper'
       >
         {items.map(({}, index) => {
