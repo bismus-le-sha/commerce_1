@@ -34,16 +34,10 @@ const swiperItems = [
 
 const Home = () => {
   const [isMobile, setIsMobile] = useState(false);
-  const { ref: refIewInheritance, inView: inViewInheritance } = useInView({
-    threshold: 0,
-  });
+
   const { ref, inView } = useInView({
     threshold: 0,
   });
-
-  const menuColor = {
-    isWhite: inViewInheritance ? false : true,
-  };
 
   useEffect(() => {
     setIsMobile(document.body.clientWidth >= 1000);
@@ -78,6 +72,7 @@ const Home = () => {
       )}
       <div>
         <div className={[cls.main5, cls.bg].join(" ")}>
+          <div className={cls.main5Background}></div>
           <div className={cls.arbitration}>
             <h2 className={cls.mainTitleIntel}>АРБИТРАЖНЫЕ СПОРЫ</h2>
             <button className={cls.linkButton}>
@@ -89,6 +84,7 @@ const Home = () => {
         </div>
       </div>
       <div className={[cls.main6, cls.bg].join(" ")}>
+        <div className={cls.main6Background}></div>
         <div className={cls.intellectualRight}>
           <div
             className={classnames(cls.intellectualRightLeft, cls.whiteColor)}
@@ -161,7 +157,8 @@ const Home = () => {
         </div>
       </div>
       <div className={[cls.main7, cls.bg].join(" ")}>
-        <div ref={refIewInheritance} className={cls.inheritanceTrigger}></div>
+        <div className={cls.main7Background}></div>
+        <div className={cls.inheritanceTrigger}></div>
         <div className={cls.inheritance}>
           <div className={classnames(cls.inheritanceRight, cls.whiteColor)}>
             <h2 className={classnames(cls.mainTitleIntel, cls.whiteColor)}>
@@ -197,6 +194,7 @@ const Home = () => {
         </div>
       </div>
       <div className={[cls.main8, cls.bg].join(" ")}>
+        <div className={cls.main8Background}></div>
         <div className={cls.criminalLaw}>
           <div className={cls.criminalLawContainer}>
             <h2 className={classnames(cls.mainTitleIntel, cls.whiteColor)}>
@@ -211,6 +209,7 @@ const Home = () => {
         </div>
       </div>
       <div className={[cls.main9, cls.bg].join(" ")}>
+        <div className={cls.main9Background}></div>
         <div className={cls.bankruptcy}>
           <div className={classnames(cls.bankruptcyContainer, cls.whiteColor)}>
             <h2 className={classnames(cls.mainTitleIntel, cls.whiteColor)}>
