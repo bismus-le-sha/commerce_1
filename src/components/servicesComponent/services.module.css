@@ -115,6 +115,11 @@
   font-weight: 900;
 }
 
+.mobile .menuItemText {
+  font-size: 20px;
+  font-weight: 900;
+}
+
 .menu {
   display: flex;
   flex-direction: column;
@@ -440,7 +445,7 @@
   }
 
   .menuItemText {
-    font-size: 12px;
+    font-size: 16px;
   }
 
   .phoneLink {

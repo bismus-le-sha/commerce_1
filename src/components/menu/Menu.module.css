@@ -21,6 +21,10 @@
   text-decoration: none;
 }
 .menuItemText {
+  font-weight: 900;
+}
+
+.menuItemText {
   color: #000;
 }
 

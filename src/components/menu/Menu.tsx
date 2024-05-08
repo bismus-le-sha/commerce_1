@@ -75,10 +75,10 @@ const Menu = (props: MenuProps) => {
           ) : isOpen ? (
             <>
               <li
-                style={{ cursor: "pointer", ...whiteStyle }}
+                style={{ cursor: "pointer", ...whiteStyle, fontWeight: 900 }}
                 onClick={handleOpen}
               >
-                Услуги
+                <span className={cls.menuItemText}>Услуги</span>
               </li>
               {Services.map(({ href, text }) => {
                 return (
@@ -104,7 +104,7 @@ const Menu = (props: MenuProps) => {
               style={{ cursor: "pointer", ...whiteStyle }}
               onClick={handleOpen}
             >
-              Услуги
+              <span className={cls.menuItemText}>Услуги</span>
             </li>
           )}
           {items.map(({ text, href }) => {
