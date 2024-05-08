@@ -14,7 +14,7 @@
 
 .linksBeforeFooterLink {
   text-decoration: none;
-  color: #000;
+  color: #000 !important;
   font-weight: 400;
   font-size: 32px;
 }

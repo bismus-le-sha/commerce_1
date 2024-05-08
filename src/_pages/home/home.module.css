@@ -8,20 +8,40 @@
 
 .main5 {
   background-image: url("../../assets/bg-5.jpg");
-  filter: brightness(1.1) contrast(0.8);
+  position: relative;
+}
+.main5Background {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backdrop-filter: brightness(1.1) contrast(0.8);
 }
 
 .main6 {
+  position: relative;
   background-image: url("../../assets/bg-6.jpg");
+}
 
-  filter: brightness(0.9) contrast(0.7);
+.main6Background {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backdrop-filter: brightness(0.9) contrast(0.7);
 }
 
 .main7 {
+  position: relative;
   background-image: url("../../assets/bg-7.jpg");
   position: relative;
-  filter: brightness(1.1) contrast(0.8);
 }
+
+.main7Background {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backdrop-filter: brightness(1.1) contrast(0.8);
+}
+
 .inheritanceTrigger {
   position: absolute;
   bottom: 0;
@@ -30,17 +50,30 @@
 }
 
 .main8 {
+  position: relative;
   background-image: url("../../assets/bg-8.png");
-  filter: brightness(2.1) contrast(0.7);
+}
+.main8Background {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backdrop-filter: brightness(2.1) contrast(0.7);
 }
 
 .main9 {
+  position: relative;
   background-image: url("../../assets/bg-9.png");
-  filter: brightness(1.1) contrast(0.7);
 }
+
+.main9Background {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backdrop-filter: brightness(1.1) contrast(0.7);
+}
+
 .main10 {
   background-image: url("../../assets/bg-10.png");
-
   position: relative;
 }
 

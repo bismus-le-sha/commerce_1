@@ -1236,6 +1236,7 @@ const Page = () => {
               ]}
               allRef={allElRefFirst}
             />
+            <h2>Для бизнеса</h2>
             <ObserverList
               items={[
                 {
