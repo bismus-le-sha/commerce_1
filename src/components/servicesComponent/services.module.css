@@ -115,6 +115,11 @@
   font-weight: 900;
 }
 
+.mobile .menuItemText {
+  font-size: 20px;
+  font-weight: 900;
+}
+
 .menu {
   display: flex;
   flex-direction: column;
@@ -352,7 +357,7 @@
   }
 
   .menuItemText {
-    font-size: 15px;
+    font-size: 14px;
   }
 
   .bigLine {
@@ -437,10 +442,6 @@
 @media (max-width: 600px) {
   .contacts {
     gap: 16px;
-  }
-
-  .menuItemText {
-    font-size: 12px;
   }
 
   .phoneLink {
