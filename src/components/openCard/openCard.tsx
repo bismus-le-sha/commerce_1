@@ -2,8 +2,8 @@
 import { ReactNode, useState } from "react";
 import cls from "./openCard.module.css";
 import Image from "next/image";
-import plus from "@/assets/plus.svg";
-import minus from "@/assets/minus.svg";
+import plus from "@/assets/plusBlack.svg";
+import minus from "@/assets/minusBlack.svg";
 
 interface OpenCardProps {
   trigger: ReactNode;

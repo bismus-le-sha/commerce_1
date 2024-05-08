@@ -49,7 +49,6 @@ export const PagesMenu = ({ children }: { children: ReactNode }) => {
             style={{
               backgroundColor: isWhite || !isDark ? "#fff" : "#282828",
               minHeight: 204,
-              padding: "0 30px",
             }}
             className={cls.contacts}
           >
@@ -97,7 +96,7 @@ export const PagesMenu = ({ children }: { children: ReactNode }) => {
             })}
           >
             <ul className={cls.menu}>
-              <ServicesComponent isMobile isWhite modalBackground='black' />
+              <ServicesComponent isMobile />
               {items.map(({ text, href }) => {
                 return (
                   <li className={cls.menuItem} key={text}>
@@ -146,7 +145,7 @@ export const PagesMenu = ({ children }: { children: ReactNode }) => {
                 ></span>
               </div>
               <ul className={cls.menu}>
-                <ServicesComponent isWhite />
+                <ServicesComponent />
                 {items.map(({ text, href }) => {
                   return (
                     <li className={cls.menuItem} key={text}>

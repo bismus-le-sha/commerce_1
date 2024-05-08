@@ -47,7 +47,7 @@ export const Services = [
     href: "/realEstate",
   },
   {
-    text: "налоги",
+    text: "Налоги",
     href: "/taxes",
   },
 ];

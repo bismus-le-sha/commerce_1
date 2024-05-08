@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { items } from "../menu/items";
 import cls from "./BeforeFooterBlock.module.css";
 
@@ -9,9 +10,9 @@ const BeforeFooterBlock = () => {
           {items.map(({ text, href }) => {
             return (
               <li key={text} className={cls.linksBeforeFooterItem}>
-                <a className={cls.linksBeforeFooterLink} href={href}>
+                <Link className={cls.linksBeforeFooterLink} href={href}>
                   {text}
-                </a>
+                </Link>
               </li>
             );
           })}

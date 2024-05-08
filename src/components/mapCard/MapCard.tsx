@@ -21,7 +21,7 @@ const MapCard = (props: MapCardProps) => {
       </div>
       <div>
         <span className={cls.email}>E-mail:</span>{" "}
-        <span className={cls.emailAddress}>deureks@deureks.ru</span>
+        <span className={cls.emailAddress}>deureks.law@gmail.com</span>
       </div>
     </div>
   );

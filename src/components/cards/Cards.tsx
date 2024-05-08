@@ -7,21 +7,16 @@ import { usePathname } from "next/navigation";
 
 const Cards = () => {
   const pathname = usePathname();
-  const isArbitration = pathname === "/arbitration";
   const isTaxes = pathname === "/taxes";
   const isRealEstate = pathname === "/realEstate";
   const isIntellectualRight = pathname === "/intellectualRight";
 
   return (
-    <div  className={cls.casesCards}>
+    <div className={cls.casesCards}>
       <CaseCard
-        className={
-          (isArbitration || isTaxes || isRealEstate) && !isIntellectualRight
-            ? cls["case-7"]
-            : cls["case-1"]
-        }
+        className={cls["case-1"]}
         img={casePortfolio}
-        email={"deureks@deureks.ru"}
+        email={"deureks.law@gmail.com"}
         name={"Анатолий Грабовский"}
         position={"Адвокат, Управляющий партнер"}
         tel={"+7 (812) 942-32-90"}
@@ -30,7 +25,7 @@ const Cards = () => {
       <CaseCard
         className={cls["case-2"]}
         img={casePortfolio}
-        email={"deureks@deureks.ru"}
+        email={"deureks.law@gmail.com"}
         name={"Олег Дейнеко"}
         position={"Адвокат, Управляющий партнер"}
         tel={"+7 (812) 942-32-90"}
@@ -40,7 +35,7 @@ const Cards = () => {
         <CaseCard
           className={cls["case-3"]}
           img={casePortfolio}
-          email={"deureks@deureks.ru"}
+          email={"deureks.law@gmail.com"}
           name={"Максим Задорожный"}
           position={"Главный юрист"}
           tel={"+7 (812) 942-32-90"}
@@ -51,7 +46,7 @@ const Cards = () => {
         <CaseCard
           className={cls["case-4"]}
           img={casePortfolio}
-          email={"deureks@deureks.ru"}
+          email={"deureks.law@gmail.com"}
           name={"Денис Чигир"}
           position={"Старший юрист"}
           tel={"+7 (812) 942-32-90"}
@@ -62,7 +57,7 @@ const Cards = () => {
         <CaseCard
           className={cls["case-5"]}
           img={casePortfolio}
-          email={"deureks@deureks.ru"}
+          email={"deureks.law@gmail.com"}
           name={"Марина Исакова"}
           position={"Главный юрист"}
           tel={"+7 (812) 942-32-90"}
@@ -73,7 +68,7 @@ const Cards = () => {
         <CaseCard
           className={cls["case-6"]}
           img={casePortfolio}
-          email={"deureks@deureks.ru"}
+          email={"deureks.law@gmail.com"}
           name={"Светлана Брешенкова"}
           position={"Аудитор"}
           tel={"+7 (812) 942-32-90"}

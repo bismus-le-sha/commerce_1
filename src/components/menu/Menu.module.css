@@ -7,7 +7,7 @@
 .menu {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 20px;
 }
 
 .menuItem:first-child {
@@ -71,9 +71,6 @@
   position: absolute;
 }
 
-.activeLink {
-}
-
 @media (max-width: 1000px) {
   .phoneLink {
     font-size: 20px;
@@ -104,6 +101,12 @@
   }
 }
 
+@media (max-width: 600px) {
+  .menuContainer {
+    visibility: hidden;
+  }
+}
+
 @media (max-width: 500px) {
   .menu {
     gap: 15px;
@@ -114,10 +117,6 @@
   }
   .contacts {
     gap: 24px;
-  }
-
-  .menuContainer {
-    visibility: hidden;
   }
 
   .smallLine {

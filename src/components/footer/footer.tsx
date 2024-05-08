@@ -71,9 +71,9 @@ const Footer = (props: FooterProps) => {
             <p className={cls.footerText}>”Все обращения конфиденциальны"</p>
             <a
               className={classnames(cls.link, cls.emailLink)}
-              href='mailto:deureks@deureks.ru'
+              href='mailto:deureks.law@gmail.com'
             >
-              deureks@deureks.ru
+              deureks.law@gmail.com
             </a>
           </div>
           <div className={cls.footerRight}>

@@ -20,7 +20,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
       );
 
       if (inputRef.current) {
-        inputRef.current.style.cssText = "background: #d3d3d3;";
+        inputRef.current.style.cssText = "background: #02C9B7;";
       }
     }, 10);
 
