@@ -75,6 +75,7 @@
 .main10 {
   background-image: url("../../assets/bg-10.png");
   position: relative;
+  max-height: 420px;
 }
 
 .main10Background {
@@ -404,6 +405,9 @@
   .footerCity {
     font-size: 24px;
   }
+  .main10 {
+    max-height: 320px;
+  }
 }
 
 @media (max-width: 1000px) {
@@ -482,6 +486,9 @@
     gap: 16px;
     min-height: 80px;
   }
+  .main10 {
+    max-height: 250px;
+  }
 }
 
 @media (max-width: 700px) {
@@ -558,6 +565,9 @@
   }
   .footerContainer {
     padding: 24.5px 10px;
+  }
+  .main10 {
+    max-height: 200px;
   }
 }
 
