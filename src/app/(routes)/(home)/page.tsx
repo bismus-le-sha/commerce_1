@@ -54,7 +54,7 @@ const Home = () => {
         <div
           style={{
             position: "fixed",
-            top: "0",
+            top: "20px",
             width: "100vw",
             maxWidth: "1730px",
             zIndex: 2,
