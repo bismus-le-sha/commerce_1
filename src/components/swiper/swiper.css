@@ -1,14 +1,16 @@
 .bg {
-  width: 100vw;
-  height: 100vh;
+  /* height: 100vh; */
   margin-bottom: 5px;
+  max-width: 1760px;
+  height: 100%;
 }
 
 .bg-1 {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url(../../assets/bg-1.png);
+  background-image: url(../../assets/bg-1.jpg);
+  filter: brightness(1.1) contrast(0.7);
 }
 
 .bg-2 {
@@ -21,7 +23,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url(../../assets/bg-3.png);
+  background-image: url(../../assets/bg-3.jpg);
 }
 .bg-4 {
   background-size: cover;
@@ -33,7 +35,7 @@
 .headerContainer {
   display: flex;
   justify-content: space-around;
-  padding: 40px 0;
+  height: 100%;
 }
 
 .logo {
@@ -46,7 +48,17 @@
 }
 
 .menuHeaderContainer {
-  /* padding: 150px 0 0 0; */
+  height: fit-content;
+}
+
+.rightSideContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.swiperItem {
+  height: 100vh !important;
 }
 
 .swiper-pagination {
@@ -54,7 +66,7 @@
   min-width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: end;
   gap: 15px;
 }
 
@@ -62,14 +74,51 @@
   font-size: 36px;
 }
 
+.MainSwiperContainer {
+  margin-bottom: 10px;
+}
+
+.swiperContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 40px;
+}
+
+.top {
+  height: 60%;
+}
+.bottom {
+  height: 40%;
+}
+
+.bottomContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 40px;
+  height: 100%;
+  align-items: center;
+}
+
+.topContainer {
+  margin-top: 40px;
+}
+
 .swiper {
   --swiper-pagination-bullet-size: 32px;
   --swiper-pagination-color: #a6a6a6;
+  --swiper-pagination-bullet-inactive-color: #ffff;
+  --swiper-pagination-bullet-inactive-opacity: 1;
 }
 
 .mainTextContainer {
   text-align: -webkit-right;
-  margin-right: 80px;
+  /* margin-right: 80px; */
+  color: #000;
+}
+
+.mainTextContainer .quoteText {
+  font-weight: 800;
 }
 
 .mainText {
@@ -85,15 +134,14 @@
     height: 100vh;
   }
   .mainText {
-    font-size: 20px;
+    font-size: 32px;
     max-width: 365px;
     min-height: 40px;
   }
   .mainTextContainer {
-    margin-right: 60px;
   }
   .swiper-pagination {
-    min-height: 50px;
+    /* min-height: 50px; */
     gap: 10px;
   }
   .menuHeaderContainer {
@@ -104,8 +152,8 @@
 @media (max-width: 700px) {
   .logo {
     background-image: url(../../assets/logoSmall.svg);
-    width: 250px;
-    height: 75px;
+    width: 210px;
+    height: 62px;
   }
 
   .menuHeaderContainer {
@@ -114,7 +162,6 @@
     /* padding-top: 90px; */
   }
   .mainTextContainer {
-    margin-right: 40px;
   }
 
   .swiper {
@@ -125,15 +172,15 @@
 @media (max-width: 500px) {
   .logo {
     background-image: url(../../assets/logoSmall.svg);
-    width: 200px;
-    height: 55px;
+    width: 150px;
+    height: 45px;
   }
   .swiper {
     --swiper-pagination-bullet-size: 16px;
   }
 
-  .menuHeaderContainer {
-    /* padding-top: 60px; */
+  .headerContainer {
+    justify-content: center;
   }
 
   .quoteText {
@@ -141,7 +188,6 @@
   }
 
   .mainTextContainer {
-    margin-right: 30px;
   }
   .mainText {
     font-size: 16px;
@@ -154,12 +200,11 @@
 
 @media (max-width: 400px) {
   .logo {
-    width: 150px;
-    height: 45px;
+    width: 110px;
+    height: 33px;
   }
 
   .mainTextContainer {
-    margin-right: 20px;
   }
 
   .mainText {

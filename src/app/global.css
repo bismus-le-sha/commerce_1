@@ -29,13 +29,12 @@ li {
   line-height: 51.2px;
   letter-spacing: 0.17em;
   text-align: left;
-  color: #fff !important;
-  border-top: 1px solid #727171;
+  color: #000 !important;
+  border-bottom: 2px solid #727171;
   padding: 5px;
+  margin-bottom: 15px;
 }
 
-.unActive {
-}
 .active {
   font-weight: 600;
   text-decoration: underline;

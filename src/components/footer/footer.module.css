@@ -128,7 +128,7 @@
   .link,
   .telLink,
   .footerCity {
-    font-size: 20px;
+    font-size: 16px;
   }
 }
 
@@ -144,16 +144,21 @@
   .footerRight {
     min-width: 150px;
   }
-  .telLink,
-  .footerCity {
-    font-size: 16px;
-  }
+
   .footerTitle {
-    font-size: 16px;
+    font-size: 12px;
   }
 
+  .telLink,
+  .footerCity {
+    font-size: 12px;
+  }
   .footerText {
-    font-size: 16px;
+    font-size: 12px;
+  }
+
+  .emailLink {
+    font-size: 12px;
   }
 
   .footerContainer {
@@ -201,6 +206,22 @@
   .footerLeft,
   .footerRight {
     min-width: 70px;
+  }
+
+  .footerTitle {
+    font-size: 8px;
+  }
+
+  .telLink,
+  .footerCity {
+    font-size: 8px;
+  }
+  .footerText {
+    font-size: 8px;
+  }
+
+  .emailLink {
+    font-size: 8px;
   }
 }
 

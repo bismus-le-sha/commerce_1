@@ -6,7 +6,6 @@ import main2 from "../../../assets/bg-2.png";
 import main3 from "../../../assets/bg-3.png";
 import main4 from "../../../assets/bg-4.png";
 import { SwiperComponent } from "../../../components/swiper/Swiper";
-
 import cls from "../../../_pages/home/home.module.css";
 import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
@@ -35,10 +34,16 @@ const swiperItems = [
 
 const Home = () => {
   const [isMobile, setIsMobile] = useState(false);
-
-  const { ref, inView, entry } = useInView({
+  const { ref: refIewInheritance, inView: inViewInheritance } = useInView({
     threshold: 0,
   });
+  const { ref, inView } = useInView({
+    threshold: 0,
+  });
+
+  const menuColor = {
+    isWhite: inViewInheritance ? false : true,
+  };
 
   useEffect(() => {
     setIsMobile(document.body.clientWidth >= 1000);
@@ -48,17 +53,25 @@ const Home = () => {
     <div className={cls.rootDiv}>
       <div
         ref={ref}
-        style={{ width: "100vw", height: "100vh", position: "absolute" }}
+        style={{ width: "10px", height: "100vh", position: "absolute" }}
       ></div>
       <SwiperComponent items={swiperItems} />
       {!inView && isMobile && (
-        <div style={{ position: "fixed", top: "0", width: "100vw" }}>
+        <div
+          style={{
+            position: "fixed",
+            top: "0",
+            width: "100vw",
+            maxWidth: "1730px",
+            zIndex: 2,
+          }}
+        >
           <div className='headerContainer'>
             <div className='menuHeaderContainer'>
-              <Menu isWhite />
+              <Menu />
             </div>
             <Link style={{ maxHeight: "80px" }} href={"/"}>
-              <div className={classnames("logo", cls.logoWhite)}></div>
+              <div className={classnames("logo")}></div>
             </Link>
           </div>
         </div>
@@ -68,7 +81,7 @@ const Home = () => {
           <div className={cls.arbitration}>
             <h2 className={cls.mainTitleIntel}>АРБИТРАЖНЫЕ СПОРЫ</h2>
             <button className={cls.linkButton}>
-              <Link className={cls.link} href='/inheritance'>
+              <Link className={cls.link} href='/arbitration'>
                 ПОДРОБНЕЕ
               </Link>
             </button>
@@ -148,22 +161,8 @@ const Home = () => {
         </div>
       </div>
       <div className={[cls.main7, cls.bg].join(" ")}>
+        <div ref={refIewInheritance} className={cls.inheritanceTrigger}></div>
         <div className={cls.inheritance}>
-          <div className={cls.inheritanceLeft}>
-            <ul className={classnames(cls.inheritanceList, cls.list)}>
-              <li className={classnames(cls.inheritanceListItem, cls.listItem)}>
-                <Link href='/inheritance/#acceptance'>принятие наследства</Link>
-              </li>
-              <li className={classnames(cls.inheritanceListItem, cls.listItem)}>
-                <Link href='/inheritance/#support'>
-                  сопровождение наследственного дела
-                </Link>
-              </li>
-              <li className={classnames(cls.inheritanceListItem, cls.listItem)}>
-                <Link href='/inheritance/#disputes'>наследственные споры</Link>
-              </li>
-            </ul>
-          </div>
           <div className={classnames(cls.inheritanceRight, cls.whiteColor)}>
             <h2 className={classnames(cls.mainTitleIntel, cls.whiteColor)}>
               НАСЛЕДСТВО
@@ -180,6 +179,21 @@ const Home = () => {
               </Link>
             </button>
           </div>
+          <div className={cls.inheritanceLeft}>
+            <ul className={classnames(cls.inheritanceList, cls.list)}>
+              <li className={classnames(cls.inheritanceListItem, cls.listItem)}>
+                <Link href='/inheritance/#acceptance'>принятие наследства</Link>
+              </li>
+              <li className={classnames(cls.inheritanceListItem, cls.listItem)}>
+                <Link href='/inheritance/#support'>
+                  сопровождение наследственного дела
+                </Link>
+              </li>
+              <li className={classnames(cls.inheritanceListItem, cls.listItem)}>
+                <Link href='/inheritance/#disputes'>наследственные споры</Link>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
       <div className={[cls.main8, cls.bg].join(" ")}>
@@ -189,9 +203,9 @@ const Home = () => {
               УГОЛОВНОЕ ПРАВО
             </h2>
             <button className={classnames(cls.linkButton, cls.whiteColor)}>
-              <a className={cls.link} href=''>
+              <Link className={cls.link} href='/criminal-law'>
                 Подробнее
-              </a>
+              </Link>
             </button>
           </div>
         </div>
@@ -203,26 +217,27 @@ const Home = () => {
               БАНКРОТСТВО
             </h2>
             <button className={[cls.linkButton, cls.linkButtonIntel].join(" ")}>
-              <a className={cls.link} href=''>
+              <Link className={cls.link} href='/bankruptcy'>
                 Подробнее
-              </a>
+              </Link>
             </button>
           </div>
         </div>
       </div>
       <div className={[cls.main10, cls.bg].join(" ")}>
+        <div className={cls.main10Background}></div>
         <div className={classnames(cls.many, cls.whiteColor)}>
-          <h2
-            className={classnames(
-              cls.mainTitleIntel,
-              cls.whiteColor,
-              cls.manyText
-            )}
+          <button
+            style={{ border: "none", minWidth: "270px" }}
+            className={cls.linkButton}
           >
-            <Link href={"/otherServices"}>Больше услуг</Link>
-          </h2>
+            <Link className={cls.link} href='/otherServices'>
+              Больше услуг
+            </Link>
+          </button>
         </div>
       </div>
+
       <div>
         <BeforeFooterBlock />
       </div>
@@ -244,9 +259,9 @@ const Home = () => {
             <p className={cls.footerText}>”Все обращения конфиденциальны"</p>
             <a
               className={classnames(cls.link, cls.emailLink)}
-              href='mailto:deureks@deureks.ru'
+              href='mailto:deureks.law@gmail.com'
             >
-              deureks@deureks.ru
+              deureks.law@gmail.com
             </a>
           </div>
           <div className={cls.footerRight}>

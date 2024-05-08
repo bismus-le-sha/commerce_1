@@ -14,7 +14,7 @@ import { items } from "../../../components/menu/items";
 import Footer from "@/components/footer/footer";
 import MapCard from "@/components/mapCard/MapCard";
 import { usePathname } from "next/navigation";
-import ServicesComponent from "@/components/servicesComponent/servicesComponent";
+import ServicesComponent from "./servicesComponent/servicesComponent";
 
 const ContactsWithUsPage = () => {
   const [isMedia, setIsMedia] = useState<boolean>(false);
@@ -157,7 +157,7 @@ const ContactsWithUsPage = () => {
             />
           </div>
         </div>
-        <div style={{ minHeight: 400 }}></div>
+        {/* <div style={{ minHeight: 400 }}></div> */}
         <Footer isWhite isDark />
       </div>
     </>

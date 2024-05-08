@@ -123,6 +123,8 @@
 
 .menuItemText {
   color: #fff;
+  font-size: 19px;
+  font-weight: 900;
 }
 
 .smallLine {
@@ -316,12 +318,12 @@
   width: 95vw;
   margin: 0 auto;
 }
-/* .menuItem:first-child {
-  margin-top: 0;
+
+@media (max-width: 1500px) {
+  .menuItemText {
+    font-size: 15px;
+  }
 }
-.menuItem:last-child {
-  margin-bottom: 0;
-} */
 
 @media (max-width: 1400px) {
   .contacts {
@@ -331,6 +333,9 @@
     width: 300px;
     height: 90px;
   }
+  .menuItemText {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 1300px) {
@@ -339,7 +344,7 @@
     font-size: 16px;
   }
   .menuItemText {
-    font-size: 11px;
+    font-size: 10px;
   }
 }
 
@@ -386,6 +391,12 @@
   }
 }
 
+@media (max-width: 1100px) {
+  .menuItemText {
+    font-size: 9px;
+  }
+}
+
 @media (max-width: 1000px) {
   .phoneLink {
     font-size: 20px;
@@ -408,7 +419,7 @@
     font-size: 12px;
   }
   .menuItemText {
-    font-size: 9px;
+    font-size: 8px;
   }
 
   .otherCases {
@@ -548,11 +559,19 @@
   .roomImageContainer {
     max-height: 650px;
   }
+
+  .menuItemText {
+    font-size: 7px;
+  }
 }
 
 @media (max-width: 700px) {
   .menu {
     gap: 20px;
+  }
+
+  .mobile .menuItemText {
+    font-size: 15px;
   }
 
   .bigLine {
@@ -662,6 +681,10 @@
     gap: 16px;
   }
 
+  .mobile .menuItemText {
+    font-size: 12px;
+  }
+
   .phoneLink {
     font-size: 12px;
   }
@@ -750,6 +773,10 @@
   .logo {
     width: 70px;
     height: 20px;
+  }
+
+  .mobile .menuItemText {
+    font-size: 9px;
   }
 
   .cityTitle {

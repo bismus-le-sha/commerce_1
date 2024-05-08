@@ -7,10 +7,10 @@
 
 .arbitrationItem {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   margin-bottom: 5px;
-  background-color: #282828;
+  background-color: #5c5c5c;
 }
 
 .arbitrationItem p {
@@ -38,6 +38,7 @@
 }
 
 .arbitrationTextContainer {
+  max-width: 450px;
   padding: 20px;
 }
 
@@ -103,7 +104,7 @@
   font-size: 24px;
   font-weight: 400;
   line-height: 38.4px;
-  letter-spacing: 0.17em;
+  letter-spacing: 0.06em;
   text-align: left;
 }
 
@@ -147,7 +148,7 @@
 @media (max-width: 1500px) {
   .arbitrationItem p {
     font-family: Open Sans;
-    font-size: 12px;
+    font-size: 15px;
     font-weight: 300;
     line-height: 32px;
     letter-spacing: 0.04em;
@@ -170,6 +171,21 @@
     letter-spacing: 0.03em;
     text-align: left;
     color: #fff;
+  }
+}
+
+@media (max-width: 1200px) {
+  .arbitrationItem p {
+    font-family: Open Sans;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    text-align: left;
+    color: #fff;
+  }
+  .arbitrationItem {
+    flex-direction: column;
   }
 }
 
@@ -221,7 +237,4 @@
 }
 
 @media (max-width: 600px) {
-  .arbitrationItem p {
-    font-size: 6px;
-  }
 }

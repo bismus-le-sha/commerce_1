@@ -4,6 +4,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import Menu from "../menu/Menu";
@@ -15,14 +16,14 @@ interface Item {
   alt: string;
 }
 
+interface SwiperComponentProps {
+  items: Item[];
+}
+
 const textItems = [
   {
-    text: "ПРОСТЫЕ РЕШЕНИЯ СЛОЖНЫХ ВОПРОСОВ",
+    text: "Закон защищает тех у кого сильный адвокат",
     quote: null,
-  },
-  {
-    text: "“НЕ ГНАТЬСЯ ЗА МНОГИМ, СТРЕМИТЬСЯ К ГЛУБИНЕ”",
-    quote: "Бальтасар Грасиан",
   },
   {
     text: "“ИСТИНА - УДЕЛ НЕМНОГИХ, ЗАБЛУЖДЕНИЕ ЖЕ ОБЫЧНО И ПОВСЕМЕСТНО”",
@@ -32,13 +33,17 @@ const textItems = [
     text: "“СУТЬ ВЕЛИЧИЯ - НЕ КОЛИЧЕСТВО, А КАЧЕСТВО”",
     quote: "Бальтасар Грасиан",
   },
+  {
+    text: "“НЕ ГНАТЬСЯ ЗА МНОГИМ, СТРЕМИТЬСЯ К ГЛУБИНЕ”",
+    quote: "Бальтасар Грасиан",
+  },
 ];
 
-export const SwiperComponent = ({ items }: { items: Item[] }) => {
+export const SwiperComponent = (props: SwiperComponentProps) => {
+  const { items } = props;
   return (
-    <div>
+    <div className='MainSwiperContainer'>
       <Swiper
-        spaceBetween={50}
         slidesPerView={1}
         onSlideChange={() => {}}
         pagination={{
@@ -47,31 +52,43 @@ export const SwiperComponent = ({ items }: { items: Item[] }) => {
         modules={[Autoplay, Pagination, Navigation]}
         centeredSlides={true}
         flipEffect={{ slideShadows: true }}
-        autoplay={{ delay: 3000, disableOnInteraction: false }}
+        // autoplay={{ delay: 5000, disableOnInteraction: false }}
         className='mySwiper'
       >
         {items.map(({}, index) => {
           return (
-            <SwiperSlide key={index}>
+            <SwiperSlide className={"swiperItem"} key={index}>
               <div className={`bg-${index + 1} bg`}>
-                <div className='headerContainer'>
-                  <div className='menuHeaderContainer'>
-                    <Menu />
-                  </div>
-                  <Link style={{ maxHeight: "80px" }} href={"/"}>
-                    <div className='logo'></div>
-                  </Link>
-                </div>
+                <div className={"swiperContainer"}>
+                  <div className={"top"}>
+                    <div className={"topContainer"}>
+                      <div className='headerContainer'>
+                        <div className='menuHeaderContainer'>
+                          <Menu />
+                        </div>
 
-                <div className='mainTextContainer'>
-                  <blockquote>
-                    <p className='mainText'>{textItems[index].text}</p>
-                    <footer>
-                      <p className='quoteText'>
-                        {textItems[index].quote && textItems[index].quote}
-                      </p>
-                    </footer>
-                  </blockquote>
+                        <div>
+                          <Link style={{ maxHeight: "80px" }} href={"/"}>
+                            <div className='logo'></div>
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className={"bottom"}>
+                    <div className={"bottomContainer"}>
+                      <div className='mainTextContainer'>
+                        <blockquote>
+                          <p className='mainText'>{textItems[index].text}</p>
+                          <footer>
+                            <p className='quoteText'>
+                              {textItems[index].quote && textItems[index].quote}
+                            </p>
+                          </footer>
+                        </blockquote>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </SwiperSlide>

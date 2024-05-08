@@ -2,10 +2,11 @@ import { usePathname } from "next/navigation";
 import React, { useState } from "react";
 import { Services } from "../menu/items";
 import Link from "next/link";
-import cls from "@/app/(routes)/(is)/otherServices/pagesMenu.module.css";
+import cls from "./services.module.css";
 import Modal from "react-modal";
 import Image from "next/image";
 import minus from "@/assets/minus.svg";
+import minusBlack from "@/assets/minusBlack.svg";
 
 interface ServicesComponent {
   isWhite?: boolean;
@@ -30,6 +31,8 @@ const ServicesComponent = (props: ServicesComponent) => {
   const closeModal = () => {
     setIsOpenModal(false);
   };
+
+  const icon = isWhite ? minus : minusBlack;
   const customStyles = {
     content: {
       top: "50%",
@@ -54,26 +57,22 @@ const ServicesComponent = (props: ServicesComponent) => {
                 style={customStyles}
                 isOpen={isOpenModal}
                 shouldCloseOnEsc
+                overlayClassName={cls.modalOverlay}
               >
                 <div
                   style={{ display: "flex", justifyContent: "space-between" }}
                 >
-                  <div>
-                    <li
-                      className={cls.menuItem}
-                      style={{
-                        cursor: "pointer",
-                        color: isWhite ? "white" : "#000",
-                        margin: 0,
-                      }}
-                      onClick={handleOpenModal}
-                    >
-                      Услуги
-                    </li>
+                  <div
+                    style={{
+                      display: "flex",
+                      gap: "10px",
+                      flexDirection: "column",
+                    }}
+                  >
                     {Services.map(({ href, text }) => {
                       return (
                         <li className={cls.menuItem} key={text}>
-                          <Link href={href}>
+                          <Link onClick={closeModal} href={href}>
                             <span
                               style={{
                                 color: isWhite ? "white" : "#000",
@@ -94,7 +93,7 @@ const ServicesComponent = (props: ServicesComponent) => {
                     })}
                   </div>
                   <div>
-                    <Image onClick={closeModal} src={minus} alt='minus' />
+                    <Image onClick={closeModal} src={icon} alt='minus' />
                   </div>
                 </div>
               </Modal>
@@ -109,7 +108,14 @@ const ServicesComponent = (props: ServicesComponent) => {
               }}
               onClick={handleOpenModal}
             >
-              Услуги
+              <span
+                style={{
+                  color: isWhite ? "white" : "#000",
+                }}
+                className={cls.menuItemText}
+              >
+                Услуги
+              </span>
             </li>
           )}
         </>
@@ -126,12 +132,19 @@ const ServicesComponent = (props: ServicesComponent) => {
                 }}
                 onClick={handleOpen}
               >
-                Услуги
+                <span
+                  style={{
+                    color: isWhite ? "white" : "#000",
+                  }}
+                  className={cls.menuItemText}
+                >
+                  Услуги
+                </span>
               </li>
               {Services.map(({ href, text }) => {
                 return (
                   <li className={cls.menuItem} key={text}>
-                    <Link href={href}>
+                    <Link onClick={closeModal} href={href}>
                       <span
                         style={{
                           color: isWhite ? "white" : "#000",
@@ -161,7 +174,14 @@ const ServicesComponent = (props: ServicesComponent) => {
               }}
               onClick={handleOpen}
             >
-              Услуги
+              <span
+                style={{
+                  color: isWhite ? "white" : "#000",
+                }}
+                className={cls.menuItemText}
+              >
+                Услуги
+              </span>
             </li>
           )}
         </>

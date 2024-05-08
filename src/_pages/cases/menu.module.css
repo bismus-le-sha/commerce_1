@@ -5,7 +5,8 @@
   max-width: 300px;
   max-height: 500px;
   position: sticky;
-  top: 40px;
+  top: 20px;
+  min-height: 700px;
 }
 
 .img {
@@ -19,7 +20,6 @@
   margin-bottom: 5px;
   border-radius: 30px;
   margin: 0 auto;
-  /* margin-bottom: 3px; */
   margin-bottom: 15px;
 }
 
@@ -66,11 +66,12 @@
 }
 
 .case1 {
-  background-image: url("../../assets/case-1.png");
+  background-image: url("../../assets/case-1.jpg");
 }
 
 .case2 {
   background-image: url("../../assets/case-2.png");
+  filter: brightness(1.2);
 }
 
 .case3 {
@@ -79,32 +80,39 @@
 
 .case4 {
   background-image: url("../../assets/case-4.png");
+  filter: brightness(1.4);
 }
 
 .case5 {
   background-image: url("../../assets/case-5.png");
+  filter: brightness(1.4) contrast(0.8);
 }
 
 .case-1 {
   background-image: url("../../assets/case_1.png");
 }
-
+/*  */
 .case-2 {
   background-image: url("../../assets/case_2.png");
+  filter: brightness(1.2) contrast(0.75);
 }
 
 .case-3 {
   background-image: url("../../assets/case_3.png");
+  filter: brightness(1.2) contrast(0.75);
 }
 
 .case-4 {
   background-image: url("../../assets/case_4.png");
+  filter: brightness(1.2) contrast(0.75);
 }
 
 .case-5 {
   background-image: url("../../assets/case_5.png");
+  filter: brightness(1.2) contrast(0.75);
 }
 
+/*  */
 .case-6 {
   background-image: url("../../assets/case_6.png");
 }
@@ -155,7 +163,7 @@
 }
 
 .mobile .menuItemText {
-  font-size: 10px;
+  font-size: 20px;
 }
 
 .menu {
@@ -179,6 +187,7 @@
 
 .menuItemText {
   color: #000;
+  font-size: 20px;
 }
 
 .smallLine {
@@ -386,6 +395,9 @@
   .menu {
     gap: 20px;
   }
+  .mobile .menuItemText {
+    font-size: 15px;
+  }
 
   .bigLine {
     width: 180px;
@@ -463,6 +475,7 @@
 
   .menuContainer {
     max-width: none;
+    min-height: fit-content;
   }
 }
 
@@ -481,6 +494,10 @@
 
   .img p {
     font-size: 6px;
+  }
+
+  .mobile .menuItemText {
+    font-size: 12px;
   }
 
   .img h3 {
@@ -535,6 +552,10 @@
 
   .phoneLink {
     font-size: 8px;
+  }
+
+  .mobile .menuItemText {
+    font-size: 9px;
   }
 
   .casesCards {

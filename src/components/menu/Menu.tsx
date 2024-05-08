@@ -9,6 +9,7 @@ import { usePathname } from "next/navigation";
 
 import Image from "next/image";
 import Link from "next/link";
+import ServicesComponent from "../servicesComponent/servicesComponent";
 
 interface MenuProps {
   isWhite?: boolean;
@@ -26,7 +27,7 @@ const Menu = (props: MenuProps) => {
   };
 
   useEffect(() => {
-    setIsMedia(document.body.clientWidth <= 500);
+    setIsMedia(document.body.clientWidth <= 600);
   }, []);
 
   const whiteStyle = {
@@ -51,14 +52,32 @@ const Menu = (props: MenuProps) => {
           alt='burgerMenu'
         />
       )}
+
       <div className={classnames(cls.menuContainer, mods)}>
-        <span style={whiteBackgroundStyle} className={cls.smallLine}></span>
-        <span style={whiteBackgroundStyle} className={cls.bigLine}></span>
+        <span
+          style={{
+            ...whiteBackgroundStyle,
+            display: isMedia ? "none" : "block",
+          }}
+          className={cls.smallLine}
+        ></span>
+        <span
+          style={{
+            ...whiteBackgroundStyle,
+            display: isMedia ? "none" : "block",
+          }}
+          className={cls.bigLine}
+        ></span>
 
         <ul className={cls.menu}>
-          {isOpen ? (
+          {isMedia ? (
+            <ServicesComponent isMobile />
+          ) : isOpen ? (
             <>
-              <li style={{ cursor: "pointer" }} onClick={handleOpen}>
+              <li
+                style={{ cursor: "pointer", ...whiteStyle }}
+                onClick={handleOpen}
+              >
                 Услуги
               </li>
               {Services.map(({ href, text }) => {
@@ -81,7 +100,10 @@ const Menu = (props: MenuProps) => {
               })}
             </>
           ) : (
-            <li style={{ cursor: "pointer" }} onClick={handleOpen}>
+            <li
+              style={{ cursor: "pointer", ...whiteStyle }}
+              onClick={handleOpen}
+            >
               Услуги
             </li>
           )}
@@ -104,9 +126,18 @@ const Menu = (props: MenuProps) => {
             );
           })}
         </ul>
-        <span style={whiteBackgroundStyle} className={cls.bigLine}></span>
         <span
-          style={whiteBackgroundStyle}
+          style={{
+            ...whiteBackgroundStyle,
+            display: isMedia ? "none" : "block",
+          }}
+          className={cls.bigLine}
+        ></span>
+        <span
+          style={{
+            ...whiteBackgroundStyle,
+            display: isMedia ? "none" : "block",
+          }}
           className={[cls.smallLine, cls.marginBottomSmallLine].join(" ")}
         ></span>
         <div className={cls.contacts}>

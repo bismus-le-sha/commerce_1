@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React, { ReactNode, useState } from "react";
-import minus from "@/assets/minusWhite.svg";
-import plus from "@/assets/plusWhite.svg";
+import minus from "@/assets/minusBlack.svg";
+import plus from "@/assets/plusBlack.svg";
 import cls from "./aboutUs.module.css";
 
 interface aboutUsCardProps {

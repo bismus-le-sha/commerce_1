@@ -19,7 +19,6 @@
   margin-bottom: 5px;
   border-radius: 30px;
   margin: 0 auto;
-  /* margin-bottom: 3px; */
   margin-bottom: 15px;
 }
 
@@ -154,8 +153,9 @@
   display: none;
 }
 
-.mobile .menuItemText {
-  font-size: 10px;
+.menuItemText {
+  font-size: 20px;
+  font-weight: 900;
 }
 
 .menu {
@@ -405,6 +405,9 @@
   .menu {
     gap: 20px;
   }
+  .mobile .menuItemText {
+    font-size: 15px;
+  }
 
   .bigLine {
     width: 180px;
@@ -490,6 +493,10 @@
     gap: 16px;
   }
 
+  .mobile .menuItemText {
+    font-size: 12px;
+  }
+
   .phoneLink {
     font-size: 12px;
   }
@@ -546,6 +553,10 @@
   .logo {
     width: 70px;
     height: 20px;
+  }
+
+  .mobile .menuItemText {
+    font-size: 9px;
   }
 
   .cityTitle {
