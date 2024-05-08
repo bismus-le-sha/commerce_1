@@ -2,6 +2,7 @@ import Cards from "@/components/cards/Cards";
 import cls from "./realEstate.module.css";
 import SelectedText from "@/components/selectedText/SelectedText";
 import Title from "@/components/Title/Title";
+import { ReactNode } from "react";
 
 const ArbitrationSelectedComponent = ({
   children,
