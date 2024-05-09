@@ -30,7 +30,7 @@ const Footer = (props: FooterProps) => {
           padding: "0 20px",
         }}
       >
-        <div className={cls.linksBeforeFooterContainer}>
+        {/* <div className={cls.linksBeforeFooterContainer}>
           <ul className={cls.linksBeforeFooterList}>
             {items.map(({ text, href }) => {
               return (
@@ -48,7 +48,7 @@ const Footer = (props: FooterProps) => {
               );
             })}
           </ul>
-        </div>
+        </div> */}
       </div>
       <footer
         style={{ maxWidth: 1700, margin: "0 auto" }}

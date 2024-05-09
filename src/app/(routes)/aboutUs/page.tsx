@@ -19,6 +19,7 @@ import letter2 from "@/assets/Group 95.png";
 import allLetter from "@/assets/Group 97.png";
 import Footer from "@/components/footer/footer";
 import ServicesComponent from "@/components/servicesComponent/servicesComponent";
+import ContactsWithUs from "../(whiteBackground)/ContactsWithUs";
 
 const Page = () => {
   const [isMedia, setIsMedia] = useState<boolean>(false);
@@ -155,7 +156,12 @@ const Page = () => {
           <div className={cls.mainContentContainer}>
             <div className={clsx.arbitrationContainer}>
               <div className={clsx.arbitrationItem}>
-                <div className={clsx.arbitrationImgContainer}>
+                <div
+                  className={classnames(
+                    clsx.arbitrationImgContainer,
+                    clsx.arbitrationImg1
+                  )}
+                >
                   <Image src={arbitration1} alt='arbitration1' />
                 </div>
                 <div className={clsx.arbitrationTextContainer}>
@@ -183,7 +189,12 @@ const Page = () => {
                     консультации и эффективно представлять интересы клиентов.
                   </p>
                 </div>
-                <div className={clsx.arbitrationImgContainer}>
+                <div
+                  className={classnames(
+                    clsx.arbitrationImgContainer,
+                    clsx.arbitrationImg2
+                  )}
+                >
                   <Image src={arbitration2} alt='arbitration-2' />
                 </div>
               </div>
@@ -377,7 +388,8 @@ const Page = () => {
             <Cards />
           </div>
         </div>
-        <Footer isWhite isDark />
+        <ContactsWithUs />
+        <Footer />
       </div>
     </>
   );

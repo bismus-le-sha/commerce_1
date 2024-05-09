@@ -22,20 +22,21 @@ interface SwiperComponentProps {
 
 const textItems = [
   {
-    text: "Закон защищает тех у кого сильный адвокат",
+    text: "ЗАКОН ЗАЩИЩАЕТ ТЕХ, У КОГО СИЛЬНЫЙ АДВОКАТ",
     quote: null,
+    white: false,
   },
   {
-    text: "“ИСТИНА - УДЕЛ НЕМНОГИХ, ЗАБЛУЖДЕНИЕ ЖЕ ОБЫЧНО И ПОВСЕМЕСТНО”",
-    quote: "Бальтасар Грасиан",
+    text: "ПРОСТЫЕ РЕШЕНИЯ СЛОЖНЫХ ВОПРОСОВ",
+    white: true,
   },
   {
-    text: "“СУТЬ ВЕЛИЧИЯ - НЕ КОЛИЧЕСТВО, А КАЧЕСТВО”",
-    quote: "Бальтасар Грасиан",
+    text: "СУТЬ ВЕЛИЧИЯ - НЕ КОЛИЧЕСТВО, А КАЧЕСТВО",
+    white: false,
   },
   {
-    text: "“НЕ ГНАТЬСЯ ЗА МНОГИМ, СТРЕМИТЬСЯ К ГЛУБИНЕ”",
-    quote: "Бальтасар Грасиан",
+    text: "НЕ ГНАТЬСЯ ЗА МНОГИМ, СТРЕМИТЬСЯ К ГЛУБИНЕ",
+    white: true,
   },
 ];
 
@@ -52,7 +53,7 @@ export const SwiperComponent = (props: SwiperComponentProps) => {
         modules={[Autoplay, Pagination, Navigation]}
         centeredSlides={true}
         flipEffect={{ slideShadows: true }}
-        autoplay={{ delay: 5000, disableOnInteraction: false }}
+        // autoplay={{ delay: 7000, disableOnInteraction: false }}
         className='mySwiper'
       >
         {items.map(({}, index) => {
@@ -79,7 +80,14 @@ export const SwiperComponent = (props: SwiperComponentProps) => {
                     <div className={"bottomContainer"}>
                       <div className='mainTextContainer'>
                         <blockquote>
-                          <p className='mainText'>{textItems[index].text}</p>
+                          <p
+                            style={{
+                              color: textItems[index].white ? "white" : "black",
+                            }}
+                            className='mainText'
+                          >
+                            {textItems[index].text}
+                          </p>
                           <footer>
                             <p className='quoteText'>
                               {textItems[index].quote && textItems[index].quote}

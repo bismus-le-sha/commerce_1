@@ -9,7 +9,7 @@
   font-size: 20px;
   font-weight: 400;
   line-height: 32px;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
 }
 
 .contentContainer li {
@@ -58,7 +58,7 @@
   font-size: 18px;
   font-weight: 400;
   line-height: 28.8px;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   text-align: justify;
 }
 
@@ -126,7 +126,7 @@
     font-size: 16px;
     font-weight: 400;
     line-height: 32px;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.06em;
   }
   .ourWorksContainer {
     display: flex;

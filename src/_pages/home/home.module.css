@@ -120,6 +120,18 @@
   z-index: 3;
 }
 
+.telegramLogoContainer {
+  position: fixed;
+
+  z-index: 999;
+  bottom: 160px;
+  left: 80px;
+}
+
+.telegramLogo {
+  border-radius: 50%;
+}
+
 .linkButtonIntel {
   border: 3px solid #000;
 }
@@ -488,6 +500,12 @@
   }
   .main10 {
     max-height: 250px;
+  }
+}
+
+@media (max-width: 749px) {
+  .telegramLogoContainer {
+    left: 0;
   }
 }
 

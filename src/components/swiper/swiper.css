@@ -17,19 +17,24 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url(../../assets/bg-2.png);
+  background-image: url(../../assets/bg-2.jpg);
+  filter: contrast(0.7);
 }
+
 .bg-3 {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-image: url(../../assets/bg-3.jpg);
+  filter: contrast(0.75);
 }
+
 .bg-4 {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url(../../assets/bg-4.png);
+  background-image: url(../../assets/bg-4.jpg);
+  filter: contrast(0.6) brightness(1.2);
 }
 
 .headerContainer {
@@ -191,6 +196,7 @@
   }
   .mainText {
     font-size: 16px;
+    color: #fff !important;
   }
 
   .quoteText {

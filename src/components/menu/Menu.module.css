@@ -21,12 +21,11 @@
   text-decoration: none;
 }
 .menuItemText {
-  font-weight: 900;
-}
-
-.menuItemText {
+  font-weight: 800;
   color: #000;
 }
+
+
 
 .smallLine {
   display: block;

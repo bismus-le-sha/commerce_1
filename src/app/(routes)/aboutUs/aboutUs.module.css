@@ -22,6 +22,15 @@
   text-align: left;
   color: #fff;
 }
+.arbitrationImg1 {
+  max-width: 530px;
+  max-height: 380px;
+}
+
+.arbitrationImg2 {
+  max-height: 380px;
+  max-width: 400px;
+}
 
 .sertificats {
   display: flex;
@@ -48,8 +57,8 @@
 }
 
 .arbitrationImgContainer {
-  max-width: 450px;
-  max-height: 380px;
+  /* max-width: 450px;
+  max-height: 380px; */
   height: 100vh;
   width: 100vw;
 }
@@ -118,7 +127,7 @@
   font-size: 20px;
   font-weight: 300;
   line-height: 29.69px;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   text-align: justify;
 }
 
@@ -159,6 +168,10 @@
   .arbitrationImgContainer {
     max-width: 400px;
     max-height: 340px;
+  }
+
+  .arbitrationImg2 {
+    max-height: 380px;
   }
 }
 

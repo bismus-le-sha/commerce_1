@@ -15,6 +15,8 @@ import Footer from "@/components/footer/footer";
 import MapCard from "@/components/mapCard/MapCard";
 import { usePathname } from "next/navigation";
 import ServicesComponent from "./servicesComponent/servicesComponent";
+import BeforeFooterBlock from "@/components/beforeFooterBlock/BeforeFooterBlock";
+import ContactsWithUs from "../(whiteBackground)/ContactsWithUs";
 
 const ContactsWithUsPage = () => {
   const [isMedia, setIsMedia] = useState<boolean>(false);
@@ -32,7 +34,7 @@ const ContactsWithUsPage = () => {
             {!isMedia && (
               <div className={classnames(cls.menuContainer)}>
                 <ul className={cls.menu}>
-                  <ServicesComponent isMobile modalBackground='black' isWhite />
+                  <ServicesComponent isMobile />
                   {items.map(({ text, href }) => {
                     return (
                       <li className={cls.menuItem} key={text}>
@@ -77,7 +79,7 @@ const ContactsWithUsPage = () => {
               })}
             >
               <ul className={cls.menu}>
-                <ServicesComponent isMobile isWhite modalBackground='black' />
+                <ServicesComponent isMobile modalBackground='black' />
                 {items.map(({ text, href }) => {
                   return (
                     <li className={cls.menuItem} key={text}>
@@ -177,8 +179,9 @@ const ContactsWithUsPage = () => {
             />
           </div>
         </div>
-        {/* <div style={{ minHeight: 400 }}></div> */}
-        <Footer isWhite isDark />
+        <ContactsWithUs />
+        <BeforeFooterBlock />
+        <Footer />
       </div>
     </>
   );
