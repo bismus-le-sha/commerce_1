@@ -53,6 +53,7 @@ const Home = () => {
       clearTimeout(timeOut.current);
     };
   }, []);
+
   return (
     <>
       <SwiperComponent items={swiperItems} />

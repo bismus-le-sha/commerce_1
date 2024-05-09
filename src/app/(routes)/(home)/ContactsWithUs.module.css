@@ -1,5 +1,4 @@
 .main10 {
-  /* background-image: url("../../../../assets/bg-10.png"); */
   background-color: #222222;
   max-height: 420px;
   max-width: 1760px;
@@ -8,12 +7,10 @@
 
 .bg {
   width: 100%;
-
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 300px;
-
   background-color: #878787;
 }
 

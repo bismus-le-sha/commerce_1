@@ -303,6 +303,10 @@
   background-image: url(../../assets/logoWhite.svg) !important;
 }
 
+.mainContainer {
+  position: relative;
+}
+
 .many {
   display: flex;
   justify-content: center;

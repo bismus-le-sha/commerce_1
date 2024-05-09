@@ -99,6 +99,7 @@ const Home = () => {
             </div>
           </div>
         </div>
+
         <div className={[cls.main6, cls.bg].join(" ")}>
           <div className={cls.main6Background}></div>
           <div className={cls.intellectualRight}>
@@ -266,6 +267,7 @@ const Home = () => {
             </button>
           </div>
         </div>
+
         <ContactsWithUs />
         <div>
           <BeforeFooterBlock />
