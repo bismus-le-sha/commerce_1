@@ -122,7 +122,12 @@ const ContactsWithUsPage = () => {
         <div className={cls.maps}>
           <div className={cls.mapImgContainer}>
             <div>
-              <Image src={map} alt='map' />
+              <a
+                href='https://yandex.ru/maps/2/saint-petersburg/house/sapyorny_pereulok_6/Z0kYdQJmTkEGQFtjfXV1cH1lbA==/?from=api-maps&ll=30.356741%2C59.941168&origin=jsapi_2_1_79&z=17'
+                target='_blank'
+              >
+                <Image src={map} alt='map' />
+              </a>
             </div>
             <MapCard
               cityText='Офис 1: г. Санкт - Петербург'
@@ -131,7 +136,12 @@ const ContactsWithUsPage = () => {
           </div>
           <div className={cls.mapImgContainer}>
             <div>
-              <Image src={map} alt='map' />
+              <a
+                href='https://yandex.ru/maps/2/saint-petersburg/house/nevskiy_prospekt_104/Z0kYdQJmTE0OQFtjfXVycHRrYw==/?from=api-maps&indoorLevel=1&ll=30.356589%2C59.931887&origin=jsapi_2_1_79&z=17.21'
+                target='_blank'
+              >
+                <Image src={map} alt='map' />
+              </a>
             </div>
             <MapCard
               cityText='Офис 2: г. Санкт - Петербург'
@@ -140,7 +150,12 @@ const ContactsWithUsPage = () => {
           </div>
           <div className={cls.mapImgContainer}>
             <div>
-              <Image src={map} alt='map' />
+              <a
+                href='https://yandex.ru/maps/2/saint-petersburg/house/15_ya_liniya_vasilyevskogo_ostrova_38_59v/Z0kYdAFnQU0OQFtjfXV1cX9lYg==/?from=api-maps&ll=30.267889%2C59.940366&origin=jsapi_2_1_79&z=17.21'
+                target='_blank'
+              >
+                <Image src={map} alt='map' />
+              </a>
             </div>
             <MapCard
               cityText='Офис 3: г. Санкт - Петербург'
@@ -149,7 +164,12 @@ const ContactsWithUsPage = () => {
           </div>
           <div className={cls.mapImgContainer}>
             <div>
-              <Image src={map} alt='map' />
+              <a
+                href='https://yandex.ru/maps/213/moscow/house/tverskaya_ulitsa_27s2/Z04Ycw5nTEAPQFtvfXt3eXpmbQ==/?from=api-maps&ll=37.597558%2C55.768659&origin=jsapi_2_1_79&z=17.21'
+                target='_blank'
+              >
+                <Image src={map} alt='map' />
+              </a>
             </div>
             <MapCard
               cityText='Офис 4: г. Москва Тверская'
