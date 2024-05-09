@@ -25,6 +25,7 @@ const Footer = () => {
                   <a
                     style={{
                       color: "#000",
+                      fontWeight: 900,
                     }}
                     className={cls.linksBeforeFooterLink}
                     href={href}
