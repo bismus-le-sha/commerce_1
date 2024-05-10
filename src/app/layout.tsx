@@ -32,7 +32,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
   return (
     <html>
       <head>
-        <script src='https://app.allwidgets.ru/s/callback/89297077-04e6-4487-b666-2f7d2f4336c8/'></script>
+        <script src='https://app.allwidgets.ru/s/callback/728e9a63-cf3f-4fde-9d5b-e7e820aaf84c/'></script>
         <link rel='preconnect' href='https://fonts.googleapis.com' />
         <link rel='preconnect' href='https://fonts.gstatic.com' />
         <link
