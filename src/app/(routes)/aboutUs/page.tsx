@@ -282,7 +282,7 @@ const Page = () => {
                               "https://kad.arbitr.ru/Document/Pdf/97c30d39-06d9-42eb-b188-aa2aaee20b8a/eae8b7d7-8089-42b8-8b43-2b3088d91921/A40-67246-2011_20111227_Reshenija_i_postanovlenija.pdf?isAddStamp=True"
                             }
                           >
-                            свидетельство №291940
+                            дело № А40-67246/11
                           </Link>
                         </p>
                       </>
@@ -295,7 +295,7 @@ const Page = () => {
                           "https://kad.arbitr.ru/Document/Pdf/97c30d39-06d9-42eb-b188-aa2aaee20b8a/eae8b7d7-8089-42b8-8b43-2b3088d91921/A40-67246-2011_20111227_Reshenija_i_postanovlenija.pdf?isAddStamp=True"
                         }
                       >
-                        <span>свидетельство №291940</span>
+                        <span>дело № А40-67246/11</span>
                       </Link>
                     }
                   />
