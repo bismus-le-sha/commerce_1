@@ -38,7 +38,11 @@ const swiperItems = [
 const Home = () => {
   const [isMobile, setIsMobile] = useState(false);
 
-  const { ref, inView } = useInView({
+  const { ref: MenuRef, inView: menuInView } = useInView({
+    threshold: 0,
+  });
+
+  const { ref: numberRef, inView: numberInView } = useInView({
     threshold: 0,
   });
 
@@ -62,11 +66,11 @@ const Home = () => {
 
       <div className={cls.rootDiv}>
         <div
-          ref={ref}
+          ref={MenuRef}
           style={{ width: "10px", height: "100vh", position: "absolute" }}
         ></div>
         <SwiperComponent items={swiperItems} />
-        {!inView && isMobile && (
+        {!menuInView && isMobile && !numberInView && (
           <div
             style={{
               position: "fixed",
@@ -86,6 +90,28 @@ const Home = () => {
             </div>
           </div>
         )}
+
+        {!menuInView && isMobile && numberInView && (
+          <div
+            style={{
+              position: "fixed",
+              top: "20px",
+              width: "100vw",
+              maxWidth: "1730px",
+              zIndex: 2,
+            }}
+          >
+            <div className='headerContainer'>
+              <div className='menuHeaderContainer'>
+                <Menu onlyOneNumber />
+              </div>
+              <Link style={{ maxHeight: "80px" }} href={"/"}>
+                <div className={classnames("logo")}></div>
+              </Link>
+            </div>
+          </div>
+        )}
+
         <div>
           <div className={[cls.main5, cls.bg].join(" ")}>
             <div className={cls.main5Background}></div>
@@ -272,7 +298,7 @@ const Home = () => {
         <div>
           <BeforeFooterBlock />
         </div>
-        <footer className={cls.footer}>
+        <footer ref={numberRef} className={cls.footer}>
           <div className={cls.footerContainer}>
             <div className={cls.footerLeft}>
               <a

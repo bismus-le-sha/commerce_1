@@ -13,10 +13,11 @@ import ServicesComponent from "../servicesComponent/servicesComponent";
 
 interface MenuProps {
   isWhite?: boolean;
+  onlyOneNumber?: boolean;
 }
 
 const Menu = (props: MenuProps) => {
-  const { isWhite } = props;
+  const { isWhite, onlyOneNumber } = props;
   const [isVisible, setIsVisible] = useState(false);
   const [isMedia, setIsMedia] = useState<boolean>(false);
   const pathname = usePathname();
@@ -141,32 +142,46 @@ const Menu = (props: MenuProps) => {
           className={[cls.smallLine, cls.marginBottomSmallLine].join(" ")}
         ></span>
         <div className={cls.contacts}>
-          <div>
-            <a
-              style={whiteStyle}
-              className={isWhite ? cls.phoneLinkWhite : cls.phoneLink}
-              href='tel:+78129423290'
-            >
-              +7 (812) 942-32-90
-            </a>
-            <h2 style={whiteStyle} className={cls.cityTitle}>
-              Санкт-Петербург
-            </h2>
-          </div>
-          <div>
-            <a
-              style={whiteStyle}
-              className={classnames(
-                isWhite ? cls.phoneLinkWhite : cls.phoneLink
-              )}
-              href='tel:+78129423290'
-            >
-              +7 (812) 942-32-90
-            </a>
-            <h2 style={whiteStyle} className={cls.cityTitle}>
-              Москва
-            </h2>
-          </div>
+          {onlyOneNumber ? (
+            <div>
+              <a
+                style={whiteStyle}
+                className={isWhite ? cls.phoneLinkWhite : cls.phoneLink}
+                href='tel:+78129423290'
+              >
+                +7 (812) 942-32-90
+              </a>
+            </div>
+          ) : (
+            <>
+              <div>
+                <a
+                  style={whiteStyle}
+                  className={isWhite ? cls.phoneLinkWhite : cls.phoneLink}
+                  href='tel:+78129423290'
+                >
+                  +7 (812) 942-32-90
+                </a>
+                <h2 style={whiteStyle} className={cls.cityTitle}>
+                  Санкт-Петербург
+                </h2>
+              </div>
+              <div>
+                <a
+                  style={whiteStyle}
+                  className={classnames(
+                    isWhite ? cls.phoneLinkWhite : cls.phoneLink
+                  )}
+                  href='tel:+78129423290'
+                >
+                  +7 (812) 942-32-90
+                </a>
+                <h2 style={whiteStyle} className={cls.cityTitle}>
+                  Москва
+                </h2>
+              </div>
+            </>
+          )}
         </div>
       </div>
     </>
