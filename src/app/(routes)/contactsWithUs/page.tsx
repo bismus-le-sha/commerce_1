@@ -139,7 +139,7 @@ const ContactsWithUsPage = () => {
           <div className={cls.mapImgContainer}>
             <div>
               <a
-                href='https://yandex.ru/maps/2/saint-petersburg/house/nevskiy_prospekt_104/Z0kYdQJmTE0OQFtjfXVycHRrYw==/?from=api-maps&indoorLevel=1&ll=30.356589%2C59.931887&origin=jsapi_2_1_79&z=17.21'
+                href='https://yandex.ru/maps/2/saint-petersburg/house/nevskiy_prospekt_22_24/Z0kYdQVkSUAFQFtjfXVydHVhZg==/?ll=30.324051%2C59.935922&z=17.53'
                 target='_blank'
               >
                 <Image src={map} alt='map' />
@@ -147,7 +147,7 @@ const ContactsWithUsPage = () => {
             </div>
             <MapCard
               cityText='Офис 2: г. Санкт - Петербург'
-              addressText='Невский пр., 104, Санкт-Петербург, 191025'
+              addressText='191186, Санкт-Петербург, Невский проспект 22-24, помещение 11-Н.'
             />
           </div>
           <div className={cls.mapImgContainer}>
