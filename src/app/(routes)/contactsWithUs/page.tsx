@@ -136,7 +136,7 @@ const ContactsWithUsPage = () => {
             </div>
             <MapCard
               cityText='Офис 1: г. Санкт - Петербург'
-              addressText='191014,Саперный переулок дом 6, пом. 38-Н'
+              addressText='Саперный переулок дом 6, пом. 38-Н, 191014'
             />
           </div>
           <div className={cls.mapImgContainer}>
@@ -150,7 +150,7 @@ const ContactsWithUsPage = () => {
             </div>
             <MapCard
               cityText='Офис 2: г. Санкт - Петербург'
-              addressText='191186, Невский проспект 22-24, помещение 11-Н.'
+              addressText='Невский проспект 22-24, помещение 11-Н., 191186'
             />
           </div>
           <div className={cls.mapImgContainer}>
