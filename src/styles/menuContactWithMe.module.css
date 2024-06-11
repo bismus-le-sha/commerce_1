@@ -486,9 +486,6 @@
 }
 
 @media (max-width: 900px) {
-  .mapImgContainer {
-    max-height: 135px;
-  }
 }
 
 @media (max-width: 800px) {

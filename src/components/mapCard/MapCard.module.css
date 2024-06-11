@@ -31,9 +31,9 @@
 }
 
 @media (max-width: 1000px) {
-  .cityText {
+  /* .cityText {
     font-size: 16px;
-  }
+  } */
 
   .emailAddress,
   .number,
@@ -59,67 +59,66 @@
 }
 
 @media (max-width: 800px) {
-  .cityText {
+  /* .cityText {
     font-size: 10px;
-  }
+  } */
 
-  .emailAddress,
+  /* .emailAddress,
   .number,
   .email,
   .phone,
   .addressText {
     font-size: 8px;
-  }
+  } */
 }
 
 @media (max-width: 600px) {
-  .cityText {
+  /* .cityText {
     font-size: 8px;
-  }
-  .emailAddress,
+  } */
+  /* .emailAddress,
   .number,
   .email,
   .phone,
   .addressText {
     font-size: 6px;
-  }
+  } */
 }
 
 @media (max-width: 500px) {
-  .cityText {
+  /* .cityText {
     font-size: 7px;
-  }
-  .emailAddress,
+  } */
+  /* .emailAddress,
   .number,
   .email,
   .phone,
   .addressText {
     font-size: 5px;
-  }
+  } */
 }
 
 @media (max-width: 400px) {
-  .cityText {
+  /* .cityText {
     font-size: 6px;
-  }
-  .emailAddress,
-  .number,
+  } */
+  /* .emailAddress,.number,
   .email,
   .phone,
   .addressText {
     font-size: 4px;
-  }
+  } */
 }
 
 @media (max-width: 300px) {
-  .cityText {
+  /* .cityText {
     font-size: 5px;
-  }
-  .emailAddress,
+  } */
+  /* .emailAddress,
   .number,
   .email,
   .phone,
   .addressText {
     font-size: 3px;
-  }
+  } */
 }

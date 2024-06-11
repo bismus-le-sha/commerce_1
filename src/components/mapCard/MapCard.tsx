@@ -17,7 +17,7 @@ const MapCard = (props: MapCardProps) => {
       </div>
       <div>
         <span className={cls.phone}>Номер телефона:</span>{" "}
-        <span className={cls.number}> +7 (812) 942-31-90</span>
+        <span className={cls.number}> +7 (812) 942-32-90</span>
       </div>
       <div>
         <span className={cls.email}>E-mail:</span>{" "}

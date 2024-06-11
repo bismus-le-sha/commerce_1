@@ -14,9 +14,10 @@ import { items } from "../../../components/menu/items";
 import Footer from "@/components/footer/footer";
 import MapCard from "@/components/mapCard/MapCard";
 import { usePathname } from "next/navigation";
-import ServicesComponent from "./servicesComponent/servicesComponent";
+
 import BeforeFooterBlock from "@/components/beforeFooterBlock/BeforeFooterBlock";
 import ContactsWithUs from "../(whiteBackground)/ContactsWithUs";
+import ServicesComponent from "@/components/servicesComponent/servicesComponent";
 
 const ContactsWithUsPage = () => {
   const [isMedia, setIsMedia] = useState<boolean>(false);
@@ -34,18 +35,20 @@ const ContactsWithUsPage = () => {
             {!isMedia && (
               <div className={classnames(cls.menuContainer)}>
                 <ul className={cls.menu}>
-                  <ServicesComponent isMobile />
+                  <ServicesComponent isMobile modalBackground='white' />
                   {items.map(({ text, href }) => {
                     return (
                       <li className={cls.menuItem} key={text}>
-                        <Link
-                          style={{
-                            borderBottom:
-                              pathname === href ? "1px solid #fff" : "none",
-                          }}
-                          href={href}
-                        >
-                          <span className={cls.menuItemText}>{text}</span>
+                        <Link href={href}>
+                          <span
+                            style={{
+                              borderBottom:
+                                pathname === href ? "1px solid #000" : "none",
+                            }}
+                            className={cls.menuItemText}
+                          >
+                            {text}
+                          </span>
                         </Link>
                       </li>
                     );
@@ -79,7 +82,7 @@ const ContactsWithUsPage = () => {
               })}
             >
               <ul className={cls.menu}>
-                <ServicesComponent isMobile modalBackground='black' />
+                <ServicesComponent isMobile modalBackground='white' />
                 {items.map(({ text, href }) => {
                   return (
                     <li className={cls.menuItem} key={text}>
