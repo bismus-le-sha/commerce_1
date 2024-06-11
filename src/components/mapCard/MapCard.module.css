@@ -45,16 +45,20 @@
 }
 
 @media (max-width: 900px) {
-  .cityText {
+  /* .cityText {
     font-size: 12px;
-  }
+  } */
 
+  .cityText,
   .emailAddress,
   .number,
   .email,
-  .phone,
-  .addressText {
+  .phone {
     font-size: 10px;
+  }
+
+  .addressText {
+    font-size: 12px;
   }
 }
 
