@@ -178,7 +178,7 @@ const ContactsWithUsPage = () => {
             </div>
             <MapCard
               cityText='Офис 4: г. Москва'
-              addressText='Тверская улица, дом 27, строение 2, этаж 2, 199178'
+              addressText='Тверская улица, дом 27, строение 2, этаж 2, 125047'
             />
           </div>
         </div>
