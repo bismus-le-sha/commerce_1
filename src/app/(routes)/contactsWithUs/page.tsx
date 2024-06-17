@@ -18,6 +18,7 @@ import { usePathname } from "next/navigation";
 import BeforeFooterBlock from "@/components/beforeFooterBlock/BeforeFooterBlock";
 import ContactsWithUs from "../(whiteBackground)/ContactsWithUs";
 import ServicesComponent from "@/components/servicesComponent/servicesComponent";
+import telegramLogo from "@/assets/telegram.svg";
 
 const ContactsWithUsPage = () => {
   const [isMedia, setIsMedia] = useState<boolean>(false);
@@ -27,8 +28,21 @@ const ContactsWithUsPage = () => {
     setIsMedia(document.body.clientWidth <= 700);
   }, []);
 
+  console.log(cls.telegramLogo);
+
   return (
     <>
+      <div className={cls.telegramLogoContainer}>
+        <a href='https://t.me/+79219423290' target='_blank'>
+          <Image
+            className={cls.telegramLogo}
+            width={58}
+            height={58}
+            src={telegramLogo}
+            alt='telegram'
+          />
+        </a>
+      </div>
       <div className={cls.container}>
         <header className={cls.header}>
           <div className={cls.contacts}>

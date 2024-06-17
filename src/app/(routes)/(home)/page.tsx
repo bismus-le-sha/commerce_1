@@ -50,6 +50,8 @@ const Home = () => {
     setIsMobile(document.body.clientWidth >= 1000);
   }, []);
 
+
+
   return (
     <>
       <div className={cls.telegramLogoContainer}>

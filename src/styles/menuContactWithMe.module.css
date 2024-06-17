@@ -24,6 +24,10 @@
   color: #fff;
 }
 
+.telegramLogo {
+  border-radius: 50%;
+}
+
 .img div {
   color: #fff;
   width: 100%;
@@ -304,6 +308,14 @@
   height: 100%;
 }
 
+.telegramLogoContainer {
+  position: fixed;
+
+  z-index: 999;
+  bottom: 160px;
+  left: 80px;
+}
+
 .mapImgContainer:not(:last-child) {
   margin-right: 15px;
 }
@@ -549,6 +561,7 @@
     max-width: 200px;
     max-height: 70px;
   }
+
   .adsLogo {
     width: 110px;
     height: 33px;
@@ -561,6 +574,12 @@
 
   .menuItemText {
     font-size: 7px;
+  }
+}
+
+@media (max-width: 749px) {
+  .telegramLogoContainer {
+    left: 0;
   }
 }
 
