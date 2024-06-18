@@ -1,12 +1,14 @@
 "use client";
 
 import React, { ReactNode, useEffect, useRef } from "react";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./global.css";
 
 const Layout = ({ children }: { children: ReactNode }) => {
   const ref = useRef<Element | null | undefined>(null);
   const widgetRef = useRef<Element | null | undefined>(null);
   const inputRef = useRef<HTMLInputElement | null | undefined>(null);
+
   const timeOut = useRef<NodeJS.Timeout>();
 
   useEffect(() => {
@@ -40,16 +42,13 @@ const Layout = ({ children }: { children: ReactNode }) => {
           rel='stylesheet'
         />
 
-        <link
-          href='https://api.tiles.mapbox.com/mapbox-gl-js/v<YOUR_MAPBOX_VERSION>/mapbox-gl.css'
-          rel='stylesheet'
-        />
         <script
           src='https://api-maps.yandex.ru/2.1/?apikey=70cb9f64-4936-4b5c-aa59-c3151d1f9a30&lang=en_US'
           type='text/javascript'
         ></script>
       </head>
       <body>{children}</body>
+      <GoogleAnalytics gaId='G-SX512R187D' />
     </html>
   );
 };
