@@ -1,8 +1,10 @@
 "use client";
 
-import React, { ReactNode, useEffect, useRef } from "react";
+import React, { ReactNode, Suspense, useEffect, useRef } from "react";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import "./global.css";
+
+import { YandexMetricaProvider } from "next-yandex-metrica";
 
 const Layout = ({ children }: { children: ReactNode }) => {
   const ref = useRef<Element | null | undefined>(null);
@@ -47,8 +49,20 @@ const Layout = ({ children }: { children: ReactNode }) => {
           type='text/javascript'
         ></script>
       </head>
-      <body>{children}</body>
+
       <GoogleAnalytics gaId='G-SX512R187D' />
+      <body>
+        <YandexMetricaProvider
+          tagID={97609503}
+          initParameters={{
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+          }}
+        >
+          {children}
+        </YandexMetricaProvider>
+      </body>
     </html>
   );
 };
