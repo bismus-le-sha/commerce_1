@@ -27,7 +27,7 @@ export const Services = [
     href: "/inheritance",
   },
   {
-    text: "банкротство",
+    text: "Банкротство",
     href: "/bankruptcy",
   },
   {

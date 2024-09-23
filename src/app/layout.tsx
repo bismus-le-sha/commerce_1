@@ -2,6 +2,7 @@
 
 import React, { ReactNode, Suspense, useEffect, useRef } from "react";
 import { GoogleAnalytics } from "@next/third-parties/google";
+
 import "./global.css";
 
 import { YandexMetricaProvider } from "next-yandex-metrica";
@@ -55,6 +56,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
         <YandexMetricaProvider
           tagID={97609503}
           initParameters={{
+	defer: true,
             clickmap: true,
             trackLinks: true,
             accurateTrackBounce: true,
