@@ -42,20 +42,20 @@ const Page = () => {
           <Link
             target='_blank'
             href={
-              "https://vc.ru/legal/1454378-top-30-luchshih-advokatov-i-advokatskih-kontor-sankt-peterburga-po-reitingu-otzyvam-cenam#Grabovskiy-Anatoliy"
+              "/pdf/анатолий_грабовский_подводные_камни_при_обращении_в_суд_с_исками.pdf"
             }
           >
-            <Image className={cls.image} src={Img3} alt='image' />
+            <Image className={cls.image} src={Img4} alt='image' />
           </Link>
         </div>
         <div className={cls.mainImageItem}>
           <Link
             target='_blank'
             href={
-              "/pdf/анатолий_грабовский_подводные_камни_при_обращении_в_суд_с_исками.pdf"
+              "https://vc.ru/legal/1454378-top-30-luchshih-advokatov-i-advokatskih-kontor-sankt-peterburga-po-reitingu-otzyvam-cenam#Grabovskiy-Anatoliy"
             }
           >
-            <Image className={cls.image} src={Img4} alt='image' />
+            <Image className={cls.image} src={Img3} alt='image' />
           </Link>
         </div>
       </div>
