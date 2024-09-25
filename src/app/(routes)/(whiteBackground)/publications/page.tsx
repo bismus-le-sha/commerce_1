@@ -52,7 +52,7 @@ const Page = () => {
           <Link
             target='_blank'
             href={
-              "https://vc.ru/legal/1454378-top-30-luchshih-advokatov-i-advokatskih-kontor-sankt-peterburga-po-reitingu-otzyvam-cenam#Grabovskiy-Anatoliy"
+              "https://vc.ru/u/460157-victor-krass/109852-yuridicheskaya-igra-kak-forma-kapitalizma"
             }
           >
             <Image className={cls.image} src={Img3} alt='image' />
