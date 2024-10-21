@@ -120,7 +120,7 @@ const ContactsWithUsPage = () => {
             <div className={classnames(cls.adsLogoContainer)}>
               <div className={cls.positionLogo}>
                 <p className={cls.adsBlockTitle}>Юридическое бюро </p>
-                <span className={cls.adsBlockTitle}>ДЕ-ЮРЕКС</span>
+                <span className={cls.adsBlockTitle}>ООО "ДЕ-ЮРЕКС"</span>
               </div>
             </div>
             <div className={classnames(cls.adsLogoContainer)}>
