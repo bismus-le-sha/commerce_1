@@ -1,8 +1,8 @@
 import classnames from "classnames";
-import main1 from "../../assets/bg-1.png";
-import main2 from "../../assets/bg-2.png";
-import main3 from "../../assets/bg-3.png";
-import main4 from "../../assets/bg-4.png";
+import main1 from "../../assets/stub_assets/white.jpg";
+import main2 from "../../assets/stub_assets/white.jpg";
+import main3 from "../../assets/stub_assets/white.jpg";
+import main4 from "../../assets/stub_assets/white.jpg";
 import { SwiperComponent } from "../../components/swiper/Swiper";
 import { useEffect, useRef } from "react";
 
@@ -62,7 +62,7 @@ const Home = () => {
           <div className={cls.arbitration}>
             <h2 className={cls.mainTitleIntel}>АРБИТРАЖНЫЕ СПОРЫ</h2>
             <button className={cls.linkButton}>
-              <a className={cls.link} href=''>
+              <a className={cls.link} href="">
                 ПОДРОБНЕЕ
               </a>
             </button>
@@ -82,7 +82,7 @@ const Home = () => {
                 cls.whiteColor,
               ].join(" ")}
             >
-              <a className={cls.link} href=''>
+              <a className={cls.link} href="">
                 Подробнее
               </a>
             </button>
@@ -165,7 +165,7 @@ const Home = () => {
                 cls.linkButton,
               ].join(" ")}
             >
-              <a className={cls.link} href=''>
+              <a className={cls.link} href="">
                 Подробнее
               </a>
             </button>
@@ -179,7 +179,7 @@ const Home = () => {
               УГОЛОВНОЕ ПРАВО
             </h2>
             <button className={classnames(cls.linkButton, cls.whiteColor)}>
-              <a className={cls.link} href=''>
+              <a className={cls.link} href="">
                 Подробнее
               </a>
             </button>
@@ -193,7 +193,7 @@ const Home = () => {
               БАНКРОТСТВО
             </h2>
             <button className={[cls.linkButton, cls.linkButtonIntel].join(" ")}>
-              <a className={cls.link} href=''>
+              <a className={cls.link} href="">
                 Подробнее
               </a>
             </button>
@@ -233,7 +233,7 @@ const Home = () => {
           <div className={cls.footerLeft}>
             <a
               className={classnames(cls.link, cls.telLink)}
-              href='tel:+78129423290'
+              href="tel:+78129423290"
             >
               +7 (812) 942-32-90
             </a>
@@ -246,7 +246,7 @@ const Home = () => {
             <p className={cls.footerText}>”Все обращения конфиденциальны"</p>
             <a
               className={classnames(cls.link, cls.emailLink)}
-              href='mailto:deureks.law@gmail.com'
+              href="mailto:deureks.law@gmail.com"
             >
               deureks.law@gmail.com
             </a>
@@ -254,7 +254,7 @@ const Home = () => {
           <div className={cls.footerRight}>
             <a
               className={classnames(cls.link, cls.telLink)}
-              href='tel:+78129423290'
+              href="tel:+78129423290"
             >
               +7 (812) 942-32-90
             </a>

@@ -1,10 +1,10 @@
 "use client";
 
 import classnames from "classnames";
-import main1 from "../../../assets/bg-1.png";
-import main2 from "../../../assets/bg-2.png";
-import main3 from "../../../assets/bg-3.png";
-import main4 from "../../../assets/bg-4.png";
+import main1 from "../../../assets/stub_assets/white.jpg";
+import main2 from "../../../assets/stub_assets/white.jpg";
+import main3 from "../../../assets/stub_assets/white.jpg";
+import main4 from "../../../assets/stub_assets/white.jpg";
 import { SwiperComponent } from "../../../components/swiper/Swiper";
 import cls from "../../../_pages/home/home.module.css";
 import { useEffect, useState } from "react";
@@ -50,18 +50,16 @@ const Home = () => {
     setIsMobile(document.body.clientWidth >= 1000);
   }, []);
 
-
-
   return (
     <>
       <div className={cls.telegramLogoContainer}>
-        <a href='https://t.me/+79219423290' target='_blank'>
+        <a href="https://t.me/+79219423290" target="_blank">
           <Image
             className={cls.telegramLogo}
             width={58}
             height={58}
             src={telegramLogo}
-            alt='telegram'
+            alt="telegram"
           />
         </a>
       </div>
@@ -82,8 +80,8 @@ const Home = () => {
               zIndex: 2,
             }}
           >
-            <div className='headerContainer'>
-              <div className='menuHeaderContainer'>
+            <div className="headerContainer">
+              <div className="menuHeaderContainer">
                 <Menu />
               </div>
               <Link style={{ maxHeight: "80px" }} href={"/"}>
@@ -103,8 +101,8 @@ const Home = () => {
               zIndex: 2,
             }}
           >
-            <div className='headerContainer'>
-              <div className='menuHeaderContainer'>
+            <div className="headerContainer">
+              <div className="menuHeaderContainer">
                 <Menu onlyOneNumber />
               </div>
               <Link style={{ maxHeight: "80px" }} href={"/"}>
@@ -120,7 +118,7 @@ const Home = () => {
             <div className={cls.arbitration}>
               <h2 className={cls.mainTitleIntel}>АРБИТРАЖНЫЕ СПОРЫ</h2>
               <button className={cls.linkButton}>
-                <Link className={cls.link} href='/arbitration'>
+                <Link className={cls.link} href="/arbitration">
                   ПОДРОБНЕЕ
                 </Link>
               </button>
@@ -142,7 +140,7 @@ const Home = () => {
                   cls.whiteColor,
                 ].join(" ")}
               >
-                <Link className={cls.link} href='/intellectualRight'>
+                <Link className={cls.link} href="/intellectualRight">
                   Подробнее
                 </Link>
               </button>
@@ -216,7 +214,7 @@ const Home = () => {
                   cls.linkButton,
                 ].join(" ")}
               >
-                <Link className={cls.link} href='/inheritance'>
+                <Link className={cls.link} href="/inheritance">
                   Подробнее
                 </Link>
               </button>
@@ -226,21 +224,21 @@ const Home = () => {
                 <li
                   className={classnames(cls.inheritanceListItem, cls.listItem)}
                 >
-                  <Link href='/inheritance/#acceptance'>
+                  <Link href="/inheritance/#acceptance">
                     принятие наследства
                   </Link>
                 </li>
                 <li
                   className={classnames(cls.inheritanceListItem, cls.listItem)}
                 >
-                  <Link href='/inheritance/#support'>
+                  <Link href="/inheritance/#support">
                     сопровождение наследственного дела
                   </Link>
                 </li>
                 <li
                   className={classnames(cls.inheritanceListItem, cls.listItem)}
                 >
-                  <Link href='/inheritance/#disputes'>
+                  <Link href="/inheritance/#disputes">
                     наследственные споры
                   </Link>
                 </li>
@@ -256,7 +254,7 @@ const Home = () => {
                 УГОЛОВНОЕ ПРАВО
               </h2>
               <button className={classnames(cls.linkButton, cls.whiteColor)}>
-                <Link className={cls.link} href='/criminal-law'>
+                <Link className={cls.link} href="/criminal-law">
                   Подробнее
                 </Link>
               </button>
@@ -275,7 +273,7 @@ const Home = () => {
               <button
                 className={[cls.linkButton, cls.linkButtonIntel].join(" ")}
               >
-                <Link className={cls.link} href='/bankruptcy'>
+                <Link className={cls.link} href="/bankruptcy">
                   Подробнее
                 </Link>
               </button>
@@ -289,7 +287,7 @@ const Home = () => {
               style={{ border: "none", minWidth: "270px" }}
               className={cls.linkButton}
             >
-              <Link className={cls.link} href='/otherServices'>
+              <Link className={cls.link} href="/otherServices">
                 Больше услуг
               </Link>
             </button>
@@ -305,7 +303,7 @@ const Home = () => {
             <div className={cls.footerLeft}>
               <a
                 className={classnames(cls.link, cls.telLink)}
-                href='tel:+78129423290'
+                href="tel:+78129423290"
               >
                 +7 (812) 942-32-90
               </a>
@@ -318,7 +316,7 @@ const Home = () => {
               <p className={cls.footerText}>”Все обращения конфиденциальны"</p>
               <a
                 className={classnames(cls.link, cls.emailLink)}
-                href='mailto:deureks.law@gmail.com'
+                href="mailto:deureks.law@gmail.com"
               >
                 deureks.law@gmail.com
               </a>
@@ -326,7 +324,7 @@ const Home = () => {
             <div className={cls.footerRight}>
               <a
                 className={classnames(cls.link, cls.telLink)}
-                href='tel:+78129423290'
+                href="tel:+78129423290"
               >
                 +7 (812) 942-32-90
               </a>

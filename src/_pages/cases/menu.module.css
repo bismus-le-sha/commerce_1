@@ -66,12 +66,12 @@
 }
 
 .case1 {
-  background-image: url("../../assets/case-1.jpg");
+  background-image: url("../../assets/stub_assets/gray.webp");
   filter: brightness(1.1);
 }
 
 .case2 {
-  background-image: url("../../assets/case-2.png");
+  background-image: url("../../assets/stub_assets/gray.webp");
   filter: brightness(1.5);
 }
 
@@ -81,23 +81,23 @@
 }
 
 .case4 {
-  background-image: url("../../assets/case-4.png");
+  background-image: url("../../assets/stub_assets/dark.jpg");
   filter: brightness(1.7);
 }
 
 .case5 {
-  background-image: url("../../assets/case-5.png");
+  background-image: url("../../assets/stub_assets/dark.jpg");
   filter: brightness(1.7) contrast(0.8);
 }
 
-.case-1 {
+/* .case-1 {
   background-image: url("../../assets/case_1.png");
-}
+} */
 /*  */
-.case-2 {
+/* .case-2 {
   background-image: url("../../assets/case_2.png");
   filter: brightness(1.2) contrast(0.75);
-}
+} */
 
 .case-3 {
   background-image: url("../../assets/case_3.png");
