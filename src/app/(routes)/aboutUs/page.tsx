@@ -162,7 +162,7 @@ const Page = () => {
                     clsx.arbitrationImg1
                   )}
                 >
-                  <Image src={arbitration1} alt="arbitration1" />
+                  {/* <Image src={arbitration1} alt="arbitration1" /> */}
                 </div>
                 <div className={clsx.arbitrationTextContainer}>
                   <p>
@@ -195,7 +195,7 @@ const Page = () => {
                     clsx.arbitrationImg2
                   )}
                 >
-                  <Image src={arbitration2} alt="arbitration-2" />
+                  {/* <Image src={arbitration2} alt="arbitration-2" /> */}
                 </div>
               </div>
               <div>

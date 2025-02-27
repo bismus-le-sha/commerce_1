@@ -7,7 +7,7 @@
 }
 
 .main5 {
-  background-image: url("../../assets/stub_assets/white.jpg");
+  background-image: url("../../assets/stub_assets/gray.webp");
   position: relative;
 }
 .main5Background {
@@ -19,7 +19,7 @@
 
 .main6 {
   position: relative;
-  background-image: url("../../assets/stub_assets/white.jpg");
+  background-image: url("../../assets/stub_assets/gray.webp");
 }
 
 .main6Background {
@@ -31,7 +31,7 @@
 
 .main7 {
   position: relative;
-  background-image: url("../../assets/stub_assets/white.jpg");
+  background-image: url("../../assets/stub_assets/gray.webp");
   position: relative;
 }
 
@@ -51,7 +51,7 @@
 
 .main8 {
   position: relative;
-  background-image: url("../../assets/stub_assets/white.jpg");
+  background-image: url("../../assets/stub_assets/dark.jpg");
 }
 .main8Background {
   position: absolute;
@@ -62,7 +62,7 @@
 
 .main9 {
   position: relative;
-  background-image: url("../../assets/stub_assets/white.jpg");
+  background-image: url("../../assets/stub_assets/gray.webp");
 }
 
 .main9Background {

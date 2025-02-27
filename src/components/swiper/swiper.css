@@ -17,7 +17,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url(../../assets/stub_assets/white.jpg);
+  background-image: url(../../assets/stub_assets/gray.webp);
   filter: contrast(0.7);
 }
 
@@ -33,7 +33,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url(../../assets/stub_assets/white.jpg);
+  background-image: url(../../assets/stub_assets/gray.webp);
   filter: contrast(0.6) brightness(1.2);
 }
 

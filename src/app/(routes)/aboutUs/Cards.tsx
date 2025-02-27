@@ -11,7 +11,8 @@ const Cards = () => {
         className={cls["case-1"]}
         img={casePortfolio}
         email={"deureks.law@gmail.com"}
-        name={"Анатолий Грабовский"}
+        name={""}
+        // name={"Анатолий Грабовский"}
         position={"Адвокат, Управляющий партнер"}
         tel={"+7 (812) 942-32-90"}
         linkHref={"anatoly.pdf"}
@@ -20,7 +21,8 @@ const Cards = () => {
         className={cls["case-2"]}
         img={casePortfolio}
         email={"deureks.law@gmail.com"}
-        name={"Олег Дейнеко"}
+        name={""}
+        // name={"Олег Дейнеко"}
         position={"Адвокат, Управляющий партнер"}
         tel={"+7 (812) 942-32-90"}
         linkHref={"oleg.pdf"}
