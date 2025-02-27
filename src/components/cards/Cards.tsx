@@ -18,7 +18,7 @@ const Cards = () => {
         img={casePortfolio}
         email={"deureks.law@gmail.com"}
         name={""}
-        // name={"Анатолий Грабовский"}
+        // name={"Адвокат Де-юрекс"}
         position={"Адвокат, Управляющий партнер"}
         tel={"+7 (812) 942-32-90"}
         linkHref={"anatoly.pdf"}
